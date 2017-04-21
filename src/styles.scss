@@ -7,6 +7,10 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
   font-family: 'Open Sans', sans-serif;
 }
 
+html, body {
+  height: 100%;
+}
+
 //Global style variables to use in application
 //color
 $darkGreen: #96CA2D;

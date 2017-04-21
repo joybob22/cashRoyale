@@ -4,16 +4,23 @@
   #topNav {
     height: 60px;
     width: 100%;
+    position: fixed;
     background-color: $darkBlue;
     .leftTopNavIMG {
-      float: left;
       height: 60px;
+      position: relative;
     }
   }
   #sideNav {
     background-color: $darkBlue;
     width: 60px;
-    height: 1000px;
+    height: 100%;
+    position: fixed;
+  }
+  height: 100%;
+  overflow: hidden;
+  .newPage {
+    margin: 60px 0 0 60px;
   }
   #mainContent {
     width: calc(100% - 60px);
