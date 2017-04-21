@@ -10,6 +10,7 @@ export class DefaultDashboardPageComponent implements OnInit {
   options: Object;
 
   constructor() {
+
     this.options = {
       title : { text : 'Chart of All Charts' },
       series: [{
