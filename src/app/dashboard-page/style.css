@@ -3,7 +3,8 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
   margin: 0;
   padding: 0;
   border: 0;
-  text-decoration: none; }
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif; }
 
 html, body {
   height: 100%; }
@@ -26,5 +27,7 @@ html, body {
     position: fixed; }
   #dashboardPage .newPage {
     margin: 60px 0 0 60px; }
+  #dashboardPage #mainContent {
+    width: calc(100% - 60px); }
 
 /*# sourceMappingURL=style.css.map */
