@@ -16,5 +16,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
   background-color: #4BB5C1;
   width: 60px;
   height: 1000px; }
+#dashboardPage #mainContent {
+  width: calc(100% - 60px); }
 
 /*# sourceMappingURL=style.css.map */
