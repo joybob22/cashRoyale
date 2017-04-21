@@ -16,6 +16,7 @@ import { CheckbookPageComponent } from './checkbook-page/checkbook-page.componen
 import { RouterModule } from "@angular/router";
 import { DefaultDashboardPageComponent } from './default-dashboard-page/default-dashboard-page.component';
 import { AngularFireService } from './angular-fire/angular-fire.service';
+import {HighchartsStatic} from "angular2-highcharts/dist/HighchartsService";
 
 
 export const firebaseConfig = {
@@ -26,6 +27,15 @@ export const firebaseConfig = {
   storageBucket: "cash-royale.appspot.com",
   messagingSenderId: "977860527900"
 };
+
+export function highChartsFactory() {
+  const hc = require('highcharts');
+  const dd = require('highcharts/modules/drilldown');
+  dd(hc);
+
+  return hc;
+
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,10 +66,12 @@ export const firebaseConfig = {
       { path: '', redirectTo: 'dashboardPage', pathMatch: 'full'}
       // { path: '**', component: PageNotFoundComponent}
     ], {useHash: true}),
-
+    ChartModule,
     AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [AngularFireService],
+  providers: [AngularFireService,
+    { provide: HighchartsStatic,
+      useFactory: highChartsFactory}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
