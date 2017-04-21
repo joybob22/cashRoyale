@@ -1,3 +1,37 @@
-<p>
-  budget-page works!
-</p>
+<div id="budgetContent">
+  <div id="heading">
+    <h1>Budget</h1>
+  </div>
+  <div id="budget">
+    <div id="addCategory">
+      <i class="fa fa-plus" aria-hidden="true"></i>
+      <input type="text" id="categoryInput">
+
+    </div>
+    <div id="categories" *ngFor="let category of budget; let i = index">
+      <div class="category">
+        <span><strong>Category</strong></span>
+        <span><strong>Total</strong></span>
+      </div>
+      <div id="category{{i}}" class="category">
+        <span>{{category.categoryName}}</span>
+        <span>{{category.total}}</span>
+      </div>
+      <div class="categoryItem">
+        <span><strong>Purchase</strong></span>
+        <span><strong>Quantity</strong></span>
+        <span><strong>Price</strong></span>
+        <span><strong>Notes</strong></span>
+      </div>
+      <div id="categoryItem{{i}}" class="categoryItem" *ngFor="let item of budget[i].items">
+        <span>{{item.purchase}}</span>
+        <span>{{item.quantity}}</span>
+        <span>{{item.price}}</span>
+        <span>{{item.notes}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
