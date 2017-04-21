@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif; }
+
+html, body {
+  height: 100%; }
+
+#checkBookMainContainer {
+  margin: 38px 0 0 60px;
+  background-color: #EDF7F2;
+  height: 100%; }
+
+/*# sourceMappingURL=checkbook-page.css.map */

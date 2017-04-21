@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,+EAA+E;AAC/E,4DAA6D;EAC3D,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,eAAe,EAAE,IAAI;EACrB,WAAW,EAAE,uBAAuB;;AAGtC,UAAW;EACT,MAAM,EAAE,IAAI;;ACRd,uBAAwB;EACtB,MAAM,EAAE,aAAa;EACrB,gBAAgB,EDaL,OAAO;ECZlB,MAAM,EAAE,IAAI",
+"sources": ["../../styles.scss","checkbook-page.scss"],
+"names": [],
+"file": "checkbook-page.css"
+}
