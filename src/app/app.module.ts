@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
+import { ChartModule } from 'angular2-highcharts';
+
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -54,6 +56,8 @@ export const firebaseConfig = {
       { path: '', redirectTo: 'dashboardPage', pathMatch: 'full'}
       // { path: '**', component: PageNotFoundComponent}
     ], {useHash: true}),
+    ChartModule.forRoot(
+      require('highcharts')),
     AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [AngularFireService],
