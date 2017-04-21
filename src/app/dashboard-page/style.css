@@ -5,16 +5,26 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
   border: 0;
   text-decoration: none; }
 
-#dashboardPage #topNav {
-  height: 60px;
-  width: 100%;
-  background-color: #4BB5C1; }
-  #dashboardPage #topNav .leftTopNavIMG {
-    float: left;
-    height: 60px; }
-#dashboardPage #sideNav {
-  background-color: #4BB5C1;
-  width: 60px;
-  height: 1000px; }
+html, body {
+  height: 100%; }
+
+#dashboardPage {
+  height: 100%;
+  overflow: hidden; }
+  #dashboardPage #topNav {
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    background-color: #4BB5C1; }
+    #dashboardPage #topNav .leftTopNavIMG {
+      height: 60px;
+      position: relative; }
+  #dashboardPage #sideNav {
+    background-color: #4BB5C1;
+    width: 60px;
+    height: 100%;
+    position: fixed; }
+  #dashboardPage .newPage {
+    margin: 60px 0 0 60px; }
 
 /*# sourceMappingURL=style.css.map */
