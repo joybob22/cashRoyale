@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { AngularFireModule } from 'angularfire2';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -12,7 +13,17 @@ import { BudgetPageComponent } from './budget-page/budget-page.component';
 import { CheckbookPageComponent } from './checkbook-page/checkbook-page.component';
 import { RouterModule } from "@angular/router";
 import { DefaultDashboardPageComponent } from './default-dashboard-page/default-dashboard-page.component';
+import { AngularFireService } from './angular-fire/angular-fire.service';
 
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyD2ySAfpDimxQ1cIMlbmajh8nGN1vyAzV0",
+  authDomain: "cash-royale.firebaseapp.com",
+  databaseURL: "https://cash-royale.firebaseio.com",
+  projectId: "cash-royale",
+  storageBucket: "cash-royale.appspot.com",
+  messagingSenderId: "977860527900"
+};
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,9 +53,10 @@ import { DefaultDashboardPageComponent } from './default-dashboard-page/default-
       },
       { path: '', redirectTo: 'homePage', pathMatch: 'full'}
       // { path: '**', component: PageNotFoundComponent}
-    ], {useHash: true})
+    ], {useHash: true}),
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [],
+  providers: [AngularFireService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
