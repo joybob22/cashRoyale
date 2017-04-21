@@ -2,7 +2,9 @@
 #dashboardPageDefault {
 
   text-align: center;
-  display: inline-block;
-
+  display: flex;
+  chart {
+    display: inline-block;
+  }
 
 }

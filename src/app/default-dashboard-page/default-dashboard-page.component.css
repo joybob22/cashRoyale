@@ -1,5 +1,7 @@
 #dashboardPageDefault {
   text-align: center;
-  display: inline-block; }
+  display: flex; }
+  #dashboardPageDefault chart {
+    display: inline-block; }
 
 /*# sourceMappingURL=default-dashboard-page.component.css.map */
