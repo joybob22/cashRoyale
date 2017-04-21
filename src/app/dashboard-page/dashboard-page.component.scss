@@ -21,8 +21,8 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
   #sideNav {
     background-color: #273038;
     width: 60px;
-    height: 1000px;
-    display: inline-block;
+    height: 100%;
+    position: fixed;
   }
   #mainContent {
     width: 100%;
