@@ -40,7 +40,7 @@ import { DefaultDashboardPageComponent } from './default-dashboard-page/default-
           { path: '', redirectTo: 'defaultDashboardPage', pathMatch: 'full'}
         ]
       },
-      { path: '', redirectTo: 'dashboardPage', pathMatch: 'full'}
+      { path: '', redirectTo: 'homePage', pathMatch: 'full'}
       // { path: '**', component: PageNotFoundComponent}
     ], {useHash: true})
   ],
