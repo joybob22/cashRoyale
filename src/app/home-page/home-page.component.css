@@ -6,6 +6,9 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
   text-decoration: none;
   font-family: 'Open Sans', sans-serif; }
 
+html, body {
+  height: 100%; }
+
 body {
   background-color: #EDF7F2; }
 
