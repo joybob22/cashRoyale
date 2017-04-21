@@ -13,4 +13,7 @@
     width: 60px;
     background-color: #4BB5C1;
   }
+  #mainContent {
+    width: calc(100% - 60px);
+  }
 }
