@@ -11,11 +11,13 @@
     }
   }
   #sideNav {
-    background-color: $darkBlue;
+    background-color: #273038;
     width: 60px;
     height: 1000px;
+    display: inline-block;
   }
   #mainContent {
     width: calc(100% - 60px);
+    display: inline-block;
   }
 }
