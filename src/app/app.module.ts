@@ -56,8 +56,7 @@ export const firebaseConfig = {
       { path: '', redirectTo: 'dashboardPage', pathMatch: 'full'}
       // { path: '**', component: PageNotFoundComponent}
     ], {useHash: true}),
-    ChartModule.forRoot(
-      require('highcharts')),
+
     AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [AngularFireService],
