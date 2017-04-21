@@ -1,5 +1,5 @@
 # CashRoyale
-![alt image] (src/assets/cashRoyaleLogo.png)
+![alt tag](https://raw.github.com/joybob22/cashRoyale/master/src/assets/cashRoyaleLogo.png)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 ## Development server
