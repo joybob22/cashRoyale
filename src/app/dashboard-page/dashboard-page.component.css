@@ -22,7 +22,7 @@ html, body {
 #dashboardPage #sideNav {
   background-color: #273038;
   width: 60px;
-  height: 100%;
+  height: 1000px;
   display: inline-block; }
 #dashboardPage #mainContent {
   width: calc(100% - 60px);
