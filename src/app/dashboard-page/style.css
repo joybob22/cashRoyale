@@ -1,6 +1,9 @@
 #dashboardPage #topNav {
   height: 60px;
   width: 100%;
-  background-color: black; }
+  background-color: #4bb5c1; }
+  #dashboardPage #topNav .leftTopNavIMG {
+    float: left;
+    height: 60px; }
 
 /*# sourceMappingURL=style.css.map */
