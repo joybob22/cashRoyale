@@ -1,11 +1,18 @@
+@import "../../styles.scss";
+
 #dashboardPage {
   #topNav {
     height: 60px;
     width: 100%;
-    background-color: #4bb5c1;
+    background-color: $darkBlue;
     .leftTopNavIMG {
       float: left;
       height: 60px;
     }
+  }
+  #sideNav {
+    background-color: $darkBlue;
+    width: 60px;
+    height: 1000px;
   }
 }

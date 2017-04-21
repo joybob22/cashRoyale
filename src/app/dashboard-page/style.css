@@ -1,9 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none; }
+
 #dashboardPage #topNav {
   height: 60px;
   width: 100%;
-  background-color: #4bb5c1; }
+  background-color: #4BB5C1; }
   #dashboardPage #topNav .leftTopNavIMG {
     float: left;
     height: 60px; }
+#dashboardPage #sideNav {
+  background-color: #4BB5C1;
+  width: 60px;
+  height: 1000px; }
 
 /*# sourceMappingURL=style.css.map */
