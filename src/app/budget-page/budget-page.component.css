@@ -12,9 +12,36 @@ html, body {
 html, body {
   height: 100%; }
 
-h1 {
-  font-size: 20px; }
-  h1 p {
-    font-size: 100px; }
+#budgetContent {
+  height: 100%;
+  margin-left: 60px;
+  background-color: #EDF7F2; }
+  #budgetContent h1 {
+    font-size: 48px;
+    font-family: "Asap", sans-serif;
+    padding: 35px; }
+  #budgetContent #budget {
+    width: 95%;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+    margin: auto; }
+    #budgetContent #budget span {
+      width: 200px; }
+    #budgetContent #budget #addCategory {
+      height: 60px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      display: flex;
+      justify-content: space-between; }
+    #budgetContent #budget .category, #budgetContent #budget .categoryItem {
+      height: 60px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      align-items: center;
+      justify-content: space-between;
+      display: flex; }
+    #budgetContent #budget .category {
+      padding-left: 20px; }
+    #budgetContent #budget .categoryItem {
+      padding-left: 40px;
+      text-align: center; }
 
 /*# sourceMappingURL=budget-page.component.css.map */

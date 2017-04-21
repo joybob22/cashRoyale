@@ -1,8 +1,48 @@
 @import '../app.component.scss';
 
-h1{
-  font-size: 20px;
-  p{
-    font-size: 100px;
+#budgetContent {
+  height: 100%;
+  margin-left: 60px;
+  background-color: $background;
+  h1 {
+    font-size: $headFontSize;
+    font-family: $largeFont;
+    padding: 35px;
+  }
+  #budget {
+    width: 95%;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12);
+    margin: auto;
+    span {
+      width: 200px;
+    }
+    #addCategory {
+      height: 60px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      display: flex;
+      justify-content: space-between;
+    }
+    .category, .categoryItem {
+      height: 60px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      align-items: center;
+      justify-content: space-between;
+      display: flex;
+
+    }
+    .category {
+      padding-left: 20px;
+    }
+    .categoryItem {
+      padding-left: 40px;
+      text-align: center;
+    }
   }
 }
+
+
+
+
+
+
