@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA,+EAA+E;AAC/E,4DAA6D;EAC3D,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,eAAe,EAAE,IAAI;;AAGvB,UAAW;EACT,MAAM,EAAE,IAAI;;ACPd,qBAAsB;EAClB,MAAM,EAAE,eAAe",
+"sources": ["../../styles.scss","default-dashboard-page.scss"],
 "names": [],
 "file": "default-dashboard-page.css"
 }
