@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DefaultDashboardPageComponent implements OnInit {
 
-  constructor() { }
+  options: Object;
 
-  ngOnInit() {
+  constructor() {
+
+    this.options = {
+      title : { text : 'Chart of All Charts' },
+      series: [{
+        data: [29.9, 71.5, 106.4, 129.2],
+      }]
+    };
   }
+
+
+  ngOnInit() {}
 
 }

@@ -1,0 +1,11 @@
+@import '../app.component.scss';
+body{
+  background-color: $background;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+  header{
+    background-color: $lightBlue;
+  }
+}

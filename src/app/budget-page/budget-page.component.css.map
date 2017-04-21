@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,EAAE;EACA,SAAS,EAAE,IAAI;EACf,IAAC;IACC,SAAS,EAAE,KAAK",
-"sources": ["budget-page.component.scss"],
-"names": [],
-"file": "budget-page.component.css"
-}
