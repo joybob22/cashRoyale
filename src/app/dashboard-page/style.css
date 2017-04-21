@@ -5,5 +5,9 @@
   #dashboardPage #topNav .leftTopNavIMG {
     float: left;
     height: 60px; }
+#dashboardPage #sideNav {
+  height: 1000px;
+  width: 60px;
+  background-color: #4BB5C1; }
 
 /*# sourceMappingURL=style.css.map */
