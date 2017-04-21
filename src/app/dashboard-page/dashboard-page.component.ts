@@ -7,10 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardPageComponent implements OnInit {
 
+  user: object;
+  open: boolean;
+
   constructor() { }
 
   ngOnInit() {
 
+    this.open = false;
+
+    this.user = {
+      name: "Bob",
+      time: "Good afternoon"
+    }
+
+  }
+
+  toggleNav(){
+    this.open = !this.open;
   }
 
 }

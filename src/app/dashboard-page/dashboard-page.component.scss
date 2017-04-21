@@ -6,26 +6,87 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
   border: 0;
   text-decoration: none;
   font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
 }
 
 #dashboardPage {
   #topNav {
+    color: white;
     height: 60px;
     width: 100%;
+    h4 {
+      float: right;
+      margin-top: 20px;
+      margin-right: 20px;
+    }
+    i.fa {
+      display: none;
+      padding: 20px;
+      height: 70px;
+      vertical-align: middle;
+    }
     background-color: $darkBlue;
     .leftTopNavIMG {
-      float: left;
       height: 60px;
     }
   }
   #sideNav {
+    position: absolute;
+  text-align: center;
     background-color: #273038;
-    width: 60px;
-    height: 100%;
-    position: fixed;
+    width: 120px;
+    height: calc(100vh - 60px);
+
+    a {
+      text-decoration: none;
+      color: white;
+      :hover {
+        background-color: #4BB5C1;
+      }
+      .nav-item.first {
+       margin-top: 60px;
+      }
+      .nav-item {
+        padding: 25px 0;
+        display: block;
+        width: 100%;
+      }
+
+    }
+
   }
+
   #mainContent {
+    margin: 60px 0 0 180px;
     width: 100%;
     display: inline-block;
+  }
+
+  @media screen and (max-width: 850px) {
+    #sideNav {
+      display: none;
+    }
+    #sideNav.sidenav-open {
+      min-width: 350px;
+      width: 50vw;
+      z-index: 99;
+      display: inline-block;
+      position: fixed;
+      text-align: left;
+
+      a .nav-item {
+        padding-left: 30px;
+      }
+    }
+    #mainContent {
+      text-align: center;
+      margin: 60px auto 0 auto;
+    }
+    #topNav {
+
+      i.fa {
+        display: inline-block;
+      }
+    }
   }
 }
