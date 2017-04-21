@@ -1,13 +1,25 @@
 <div id="dashboardPage">
   <div id="topNav">
+    <i class="fa fa-bars" aria-hidden="true" id="trigger-navbar" (click)="toggleNav()"></i>
     <img [routerLink]="['homePage']" src="../../assets/cashRoyaleLogo.png" class="leftTopNavIMG">
+
+    <h4><strong>{{user.time}}, {{user.name}}</strong></h4>
   </div>
-  <div id="sideNav">
-    <a [routerLink]="['defaultDashboardPage']">Dashboard</a>
-    <a [routerLink]="['checkbookPage']">Checkbook</a>
-    <a [routerLink]="['budgetPage']">Budget</a>
+
+  <div id="sideNav" [ngClass]="{'sidenav-open': open}">
+      <a [routerLink]="['defaultDashboardPage']">
+        <span class="nav-item first">Dashboard</span>
+      </a>
+    <a [routerLink]="['checkbookPage']">
+      <span class="nav-item">Checkbook</span>
+      </a>
+    <a [routerLink]="['budgetPage']">
+      <span class="nav-item">Budget</span>
+      </a>
   </div>
+
   <div id="mainContent">
+
     <router-outlet></router-outlet>
   </div>
 </div>
