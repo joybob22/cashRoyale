@@ -12,6 +12,13 @@ html, body {
 html, body {
   height: 100%; }
 
+html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif; }
+
 #dashboardPage #topNav {
   height: 60px;
   width: 100%;
@@ -22,10 +29,10 @@ html, body {
 #dashboardPage #sideNav {
   background-color: #273038;
   width: 60px;
-  height: 1000px;
-  display: inline-block; }
+  height: 100%;
+  position: fixed; }
 #dashboardPage #mainContent {
-  width: calc(100% - 60px);
+  width: 100%;
   display: inline-block; }
 
 /*# sourceMappingURL=dashboard-page.component.css.map */
