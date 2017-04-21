@@ -1,11 +1,14 @@
 <div id="dashboardPage">
   <div id="topNav">
-    <img src="../../assets/cashRoyaleLogo.png" class="leftTopNavIMG">
+    <img [routerLink]="['homePage']" src="../../assets/cashRoyaleLogo.png" class="leftTopNavIMG">
   </div>
-  <div id="sideNav"></div>
+  <div id="sideNav">
+    <a [routerLink]="['defaultDashboardPage']">Dashboard</a>
+    <a [routerLink]="['checkbookPage']">Checkbook</a>
+    <a [routerLink]="['budgetPage']">Budget</a>
+  </div>
   <div id="mainContent">
-
+    <router-outlet></router-outlet>
   </div>
-  <router-outlet class="newPage"></router-outlet>
 </div>
 
