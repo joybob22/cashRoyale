@@ -46,11 +46,11 @@ html, body {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 50vh;
-  padding-top: 50vh; }
+  padding-bottom: 44vh;
+  padding-top: 44vh; }
 
 .plax.content {
-  background: none repeat scroll 0 0 #2581e8;
+  background: none repeat scroll 0 0 #002F2F;
   padding: 42px 0; }
 
 .plax .headlines h1 {
@@ -84,9 +84,11 @@ h3 {
     font-weight: 700;
     text-transform: uppercase; }
   .signUp .signupForm {
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    color: white;
     margin: 0 auto;
     padding: 10px;
-    border: 2px solid #5b5b5b;
     border-radius: 8px; }
     .signUp .signupForm div {
       margin: 8px auto; }
@@ -95,7 +97,8 @@ h3 {
 
 .header .logo {
   width: 80px; }
-.header .myButton {
+
+.myButton {
   float: right;
   margin: 10px 15px auto auto;
   background-color: transparent;
@@ -110,11 +113,16 @@ h3 {
   font-size: 18px;
   padding: 7px 25px;
   text-decoration: none; }
-.header .myButton:hover {
+
+.myButton:hover {
   background-color: transparent; }
-.header .myButton:active {
+
+.myButton:active {
   position: relative;
   top: 1px; }
+
+#linkSignIn {
+  margin-right: 60px; }
 
 .intro {
   text-align: center;
@@ -126,13 +134,19 @@ h3 {
     font-size: 24px; }
 
 .examples {
-  display: inline;
-  margin-left: 25px; }
+  color: white;
+  text-align: center;
+  margin-top: 5vh; }
+
+.interfaceExamples {
+  color: white;
+  margin-top: 5vh;
+  text-align: center; }
 
 .graphIMG {
   padding: 15px;
-  width: 400px;
-  height: auto; }
+  width: 350px;
+  height: 200px; }
 
 @media (max-width: 667px) {
   .container {

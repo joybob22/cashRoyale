@@ -40,11 +40,11 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 50vh;
-  padding-top: 50vh;
+  padding-bottom: 44vh;
+  padding-top: 44vh;
 }
 .plax.content {
-  background: none repeat scroll 0 0 #2581e8;
+  background: none repeat scroll 0 0 #002F2F;
   padding: 42px 0;
 
 }
@@ -86,9 +86,11 @@ h3{
     text-transform: uppercase;
   }
   .signupForm{
+    background:rgba(0,0,0,0.5);
+    opacity: 1;
+    color: white;
     margin: 0 auto;
     padding: 10px;
-    border: 2px solid #5b5b5b;
     border-radius: 8px;
     div{
       margin: 8px auto;
@@ -103,29 +105,32 @@ h3{
   .logo{
     width: 80px;
   }
-  .myButton {
-    float: right;
-    margin: 10px 15px auto auto;
-    background-color:transparent;
-    -moz-border-radius:15px;
-    -webkit-border-radius:15px;
-    border-radius:15px;
-    border:1px solid #d6bcd6;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-family: $subFontSize;
-    font-size:18px;
-    padding:7px 25px;
-    text-decoration:none;
-  }
-  .myButton:hover {
-    background-color:transparent;
-  }
-  .myButton:active {
-    position:relative;
-    top:1px;
-  }
+}
+.myButton {
+  float: right;
+  margin: 10px 15px auto auto;
+  background-color:transparent;
+  -moz-border-radius:15px;
+  -webkit-border-radius:15px;
+  border-radius:15px;
+  border:1px solid #d6bcd6;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family: $subFontSize;
+  font-size:18px;
+  padding:7px 25px;
+  text-decoration:none;
+}
+.myButton:hover {
+  background-color: transparent;
+}
+.myButton:active {
+  position:relative;
+  top:1px;
+}
+#linkSignIn{
+  margin-right: 60px;
 }
 
 .intro{
@@ -139,14 +144,23 @@ h3{
   }
 }
 .examples{
-  display: inline;
-  margin-left: 25px;
+  color: white;
+  text-align: center;
+  margin-top: 5vh;
 }
+
+.interfaceExamples{
+  color: white;
+  margin-top: 5vh;
+  text-align: center;
+}
+
 .graphIMG {
   padding: 15px;
-  width: 400px;
-  height: auto;
+  width: 350px;
+  height: 200px;
 }
+
 @media (max-width: 667px) {
   //not triggering after the .container for an unknown reason, ask mario
   .container{
