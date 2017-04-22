@@ -15,7 +15,7 @@ import { BudgetPageComponent } from './budget-page/budget-page.component';
 import { CheckbookPageComponent } from './checkbook-page/checkbook-page.component';
 import { RouterModule } from "@angular/router";
 import { DefaultDashboardPageComponent } from './default-dashboard-page/default-dashboard-page.component';
-import { AngularFireService } from './angular-fire/angular-fire.service';
+import { AuthService } from './angular-fire/auth-service.service';
 import {HighchartsStatic} from "angular2-highcharts/dist/HighchartsService";
 import { AddCheckbookComponent } from './add-checkbook/add-checkbook.component';
 
@@ -72,7 +72,7 @@ export function highChartsFactory() {
     ChartModule,
     AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [AngularFireService,
+  providers: [AuthService,
     { provide: HighchartsStatic,
       useFactory: highChartsFactory},
   ],
