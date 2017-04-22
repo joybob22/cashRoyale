@@ -1,55 +1,80 @@
-/*
-Error: Invalid CSS after "...rgin-left: 61px": expected "{", was ";"
-        on line 62 of dashboard-page.component.scss
+/* You can add global styles to this file, and also import other style files */
+html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif; }
 
-57: 
-58:   }
-59: 
-60:   #mainContent {
-61: <<<<<<< HEAD
-62:     margin-left: 61px;
-63: =======
-64:     margin:   0 0 0 120px;
-65: >>>>>>> 7f97f965636f9578e0ac55087a2bde7ae3fd73c4
-66:     width: 100%;
-67:     display: inline-block;
+html, body {
+  height: 100%; }
 
-Backtrace:
-dashboard-page.component.scss:62
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1207:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1137:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1132:in `tok!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:665:in `block'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:735:in `declaration_or_ruleset'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:674:in `block_contents'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:735:in `declaration_or_ruleset'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:658:in `ruleset'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:684:in `block_child'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:125:in `stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:41:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/engine.rb:406:in `_to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/plugin.rb:82:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23/bin/scss:13:in `<top (required)>'
-/usr/local/bin/scss:23:in `load'
-/usr/local/bin/scss:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...rgin-left: 61px\": expected \"{\", was \";\"\A         on line 62 of dashboard-page.component.scss\A \A 57: \A 58:   }\A 59: \A 60:   #mainContent {\A 61: <<<<<<< HEAD\A 62:     margin-left: 61px;\A 63: =======\A 64:     margin:   0 0 0 120px;\A 65: >>>>>>> 7f97f965636f9578e0ac55087a2bde7ae3fd73c4\A 66:     width: 100%;\A 67:     display: inline-block;"; }
+html, body {
+  height: 100%; }
+
+html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden; }
+
+#dashboardPage #topNav {
+  color: white;
+  height: 60px;
+  width: 100%;
+  background-color: #4BB5C1; }
+  #dashboardPage #topNav h4 {
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px; }
+  #dashboardPage #topNav i.fa {
+    display: none;
+    padding: 20px;
+    height: 70px;
+    vertical-align: middle; }
+  #dashboardPage #topNav .leftTopNavIMG {
+    height: 60px;
+    background-color: #296c83; }
+#dashboardPage #sideNav {
+  position: absolute;
+  text-align: center;
+  background-color: #273038;
+  width: 120px;
+  height: calc(100vh - 60px); }
+  #dashboardPage #sideNav a {
+    text-decoration: none;
+    color: white; }
+    #dashboardPage #sideNav a :hover {
+      background-color: #4BB5C1; }
+    #dashboardPage #sideNav a .nav-item.first {
+      margin-top: 60px; }
+    #dashboardPage #sideNav a .nav-item {
+      padding: 25px 0;
+      display: block;
+      width: 100%; }
+#dashboardPage #mainContent {
+  margin: 0 0 0 120px;
+  width: 100%;
+  display: inline-block; }
+@media screen and (max-width: 850px) {
+  #dashboardPage #sideNav {
+    display: none; }
+  #dashboardPage #sideNav.sidenav-open {
+    cursor: pointer;
+    min-width: 350px;
+    width: 50vw;
+    z-index: 99;
+    display: inline-block;
+    position: fixed;
+    text-align: left; }
+    #dashboardPage #sideNav.sidenav-open a .nav-item {
+      padding-left: 30px; }
+  #dashboardPage #mainContent {
+    text-align: center;
+    margin: 60px auto 0 auto; }
+  #dashboardPage #topNav i.fa {
+    display: inline-block; } }
+
+/*# sourceMappingURL=dashboard-page.component.css.map */
