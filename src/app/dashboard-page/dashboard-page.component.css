@@ -56,7 +56,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
       width: 100%; }
 #dashboardPage #mainContent {
   margin-left: 121px;
-  width: 100%;
+  width: calc(100% - 120px);
   display: inline-block; }
 @media screen and (max-width: 850px) {
   #dashboardPage #sideNav {
@@ -73,7 +73,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
       padding-left: 30px; }
   #dashboardPage #mainContent {
     text-align: center;
-    margin: 60px auto 0 auto; }
+    margin: 0 0 0 120px; }
   #dashboardPage #topNav i.fa {
     display: inline-block; } }
 
