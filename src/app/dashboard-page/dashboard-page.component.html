@@ -7,8 +7,7 @@
 
   <div id="sideNav" [ngClass]="{'sidenav-open': open}">
     <img [routerLink]="['defaultDashboardPage']" src="../../assets/cashRoyaleLogo.png" class="leftTopNavIMG">
-    <span id="close-button"><i class="fa fa-bars" aria-hidden="true" (click)="toggleNav()"></i></span>
-
+    <div id="close-button"><i class="fa fa-arrow-left fa-3x" aria-hidden="true" (click)="toggleNav()"></i></div>
 
     <a [routerLink]="['defaultDashboardPage']">
         <span class="nav-item first">Dashboard</span>
