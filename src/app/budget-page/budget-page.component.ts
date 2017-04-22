@@ -17,6 +17,9 @@ export class BudgetPageComponent implements OnInit {
               total: '$45.78'
             }
             ];
+
+  //budget = [{category: 'grocery', purchase: 'milk', quantity: 1, notes: }];
+
   constructor() {}
 
   ngOnInit() {
