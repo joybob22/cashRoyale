@@ -40,7 +40,8 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
 
     .leftTopNavIMG {
       width: 100%;
-
+      cursor: pointer;
+      outline: none;
       background-color: #296c83;
     }
     #close-button {
