@@ -13,17 +13,22 @@ export class AuthService{
     this.authState = auth$.getAuth();
     auth$.subscribe((state: FirebaseAuthState) => {
       this.authState = state;
+
     });
 
 
+    this.ang.database.list('/users');
   }
+
 
   authenticated(): Observable<any> {
     return this.auth$;
   }
 
-  get uId() {
-    return this.auth$.getAuth().uid;
+ get uId() {
+   return this.auth$.getAuth().uid;
+
+
   }
 
   registerUser(credentials: any) {
@@ -33,7 +38,7 @@ console.log(credentials);
         console.log(authData);
         this.ang.database.list('users').update(authData.uid, {
           name: credentials.name,
-          email:"myemail@email.com",
+          email: credentials.email,
           provider: 'email',
           checkbooks: [{
             name: 'vacation',
@@ -67,7 +72,7 @@ console.log(credentials);
           }]
 
         });
-        console.log(authData);
+        localStorage.setItem('uId', this.auth$.getAuth().uid);
         credentials.created = true;
         observer.next(credentials);
         console.log('yes');
@@ -104,6 +109,7 @@ console.log(credentials);
     });
   }
   signOut(): void {
+    localStorage.setItem('uId', null);
     this.auth$.logout();
   }
 

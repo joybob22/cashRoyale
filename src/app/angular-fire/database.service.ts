@@ -22,4 +22,11 @@ export class DatabaseService {
       this.users = data;
     });
   }
+
+  getUsers(){
+    return this.firebaseUsers.subscribe(data => {
+      this.users= data;
+    })
+  }
+
 }
