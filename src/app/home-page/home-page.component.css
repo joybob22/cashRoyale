@@ -70,8 +70,10 @@ h3 {
 
 .stupidLeftContainer {
   margin: 5% auto auto 15%; }
-  .stupidLeftContainer h3 {
-    color: white; }
+  .stupidLeftContainer h1, .stupidLeftContainer h3 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100; }
 
 .signUp {
   display: flex;
@@ -79,10 +81,11 @@ h3 {
   .signUp .signupCaption {
     margin: auto;
     color: white;
-    font-family: "Roboto", sans-serif;
     font-size: 24px;
-    font-weight: 700;
     text-transform: uppercase; }
+    .signUp .signupCaption #signupCaption {
+      font-family: 'Roboto', sans-serif !important;
+      font-weight: 200; }
   .signUp .signupForm {
     background: rgba(0, 0, 0, 0.5);
     opacity: 1;
