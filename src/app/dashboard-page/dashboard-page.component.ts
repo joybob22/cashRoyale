@@ -21,9 +21,9 @@ export class DashboardPageComponent implements OnInit {
 
     this.firebaseUser = af.database.list("/users");
     this.firebaseUser.subscribe(data => {
-      this.users = data[1];
-      console.log(this.users);
-
+      this.users = data;
+          console.log(data);
+          //data[1]
     });
 
 
