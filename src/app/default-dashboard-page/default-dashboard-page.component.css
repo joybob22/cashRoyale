@@ -1,7 +1,13 @@
 #dashboardPageDefault {
+  width: 100%;
   text-align: center;
   display: flex; }
   #dashboardPageDefault chart {
+    margin: 30px;
+    margin-top: 60px;
     display: inline-block; }
+  @media screen and (max-width: 1450px) {
+    #dashboardPageDefault chart {
+      display: block; } }
 
 /*# sourceMappingURL=default-dashboard-page.component.css.map */
