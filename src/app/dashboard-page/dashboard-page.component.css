@@ -35,7 +35,8 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
     height: 70px;
     vertical-align: middle; }
   #dashboardPage #topNav .leftTopNavIMG {
-    height: 60px; }
+    height: 60px;
+    background-color: #296c83; }
 #dashboardPage #sideNav {
   position: absolute;
   text-align: center;
