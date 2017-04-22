@@ -71,7 +71,8 @@ export function highChartsFactory() {
   ],
   providers: [AngularFireService,
     { provide: HighchartsStatic,
-      useFactory: highChartsFactory}],
+      useFactory: highChartsFactory},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
