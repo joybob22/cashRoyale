@@ -54,13 +54,14 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
       display: block;
       width: 100%; }
 #dashboardPage #mainContent {
-  margin: 60px 0 0 180px;
+  margin: 0 0 0 120px;
   width: 100%;
   display: inline-block; }
 @media screen and (max-width: 850px) {
   #dashboardPage #sideNav {
     display: none; }
   #dashboardPage #sideNav.sidenav-open {
+    cursor: pointer;
     min-width: 350px;
     width: 50vw;
     z-index: 99;
