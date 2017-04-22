@@ -162,6 +162,9 @@ h3{
   color: white;
   margin-top: 5vh;
   text-align: center;
+  img{
+    width: auto;
+  }
 }
 
 .graphIMG {
@@ -178,7 +181,7 @@ h3{
   font: normal 16px sans-serif;
 
   padding: 45px 50px;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .footer-distributed .footer-left p{
@@ -213,7 +216,7 @@ h3{
 .footer-distributed .footer-right a{
   display: inline-block;
   width: 35px;
-  height: 0px;
+  height: 0;
   background-color:  #33383b;
   border-radius: 2px;
 
