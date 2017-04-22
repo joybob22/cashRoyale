@@ -14,7 +14,6 @@ html, body {
 
 #budgetContent {
   height: 100%;
-  margin-left: 60px;
   background-color: #EDF7F2; }
   #budgetContent h1 {
     font-size: 48px;
@@ -25,23 +24,58 @@ html, body {
     background-color: white;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
     margin: auto; }
+    #budgetContent #budget i {
+      cursor: pointer; }
+    #budgetContent #budget .fa-plus {
+      color: greenyellow;
+      font-size: 24px; }
+    #budgetContent #budget .fa-times {
+      color: red;
+      font-size: 24px; }
+    #budgetContent #budget h3 {
+      font-size: 24px;
+      margin-left: 25px; }
+    #budgetContent #budget input {
+      margin-left: 25px;
+      margin-right: 10px;
+      height: 25px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      padding-left: 10px;
+      border-radius: 0.25rem;
+      outline: none; }
+    #budgetContent #budget input:focus {
+      border: 1px solid #0022ff; }
     #budgetContent #budget span {
       width: 200px; }
     #budgetContent #budget #addCategory {
       height: 60px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.08);
       display: flex;
+      align-items: center; }
+    #budgetContent #budget .addItem {
+      height: 30px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      display: flex;
+      align-items: center;
       justify-content: space-between; }
+      #budgetContent #budget .addItem span {
+        width: 200px;
+        text-align: center; }
+      #budgetContent #budget .addItem input {
+        margin: 0;
+        padding: 0;
+        width: 200px; }
     #budgetContent #budget .category, #budgetContent #budget .categoryItem {
       height: 60px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.08);
       align-items: center;
       justify-content: space-between;
-      display: flex; }
-    #budgetContent #budget .category {
-      padding-left: 20px; }
-    #budgetContent #budget .categoryItem {
-      padding-left: 40px;
+      display: flex;
       text-align: center; }
+    #budgetContent #budget .category {
+      font-size: 20px;
+      height: 60px; }
+    #budgetContent #budget .categoryItem {
+      height: 30px; }
 
 /*# sourceMappingURL=budget-page.component.css.map */

@@ -1,3 +1,21 @@
-#container {
+@import '../app.component.scss';
 
+#container {
+  background-color: $background;
+  .submitButton {
+    padding: 5px 20px;
+    background-color: $darkGreen;
+    float: left;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  .submitButton:hover {
+    background-color: $lightGreen;
+    cursor: pointer;
+  }
+
+  #createItemContainer {
+    margin-top: 300px;
+    margin-left: 10px;
+  }
 }

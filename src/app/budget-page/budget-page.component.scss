@@ -2,7 +2,6 @@
 
 #budgetContent {
   height: 100%;
-  margin-left: 60px;
   background-color: $background;
   h1 {
     font-size: $headFontSize;
@@ -14,6 +13,33 @@
     background-color: white;
     box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12);
     margin: auto;
+    i {
+      cursor: pointer;
+    }
+    .fa-plus {
+      color: greenyellow;
+      font-size: $subFontSize;
+    }
+    .fa-times {
+      color: red;
+      font-size: $subFontSize;
+    }
+    h3 {
+      font-size: $subFontSize;
+      margin-left: 25px;
+    }
+    input {
+      margin-left: 25px;
+      margin-right: 10px;
+      height: 25px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      padding-left: 10px;
+      border-radius: 0.25rem;
+      outline: none;
+    }
+    input:focus {
+      border: 1px solid #0022ff;
+    }
     span {
       width: 200px;
     }
@@ -21,7 +47,23 @@
       height: 60px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.08);
       display: flex;
+      align-items: center;
+    }
+    .addItem {
+      height: 30px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      display: flex;
+      align-items: center;
       justify-content: space-between;
+      span {
+        width: 200px;
+        text-align: center;
+      }
+      input {
+        margin: 0;
+        padding: 0;
+        width: 200px;
+      }
     }
     .category, .categoryItem {
       height: 60px;
@@ -29,14 +71,14 @@
       align-items: center;
       justify-content: space-between;
       display: flex;
-
+      text-align: center;
     }
     .category {
-      padding-left: 20px;
+      font-size: 20px;
+      height: 60px;
     }
     .categoryItem {
-      padding-left: 40px;
-      text-align: center;
+      height: 30px;
     }
   }
 }

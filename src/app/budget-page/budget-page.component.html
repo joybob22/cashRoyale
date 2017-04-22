@@ -4,30 +4,52 @@
   </div>
   <div id="budget">
     <div id="addCategory">
-      <i class="fa fa-plus" aria-hidden="true"></i>
-      <input type="text" id="categoryInput">
-
+      <h3>Add a Category</h3>
+      <input type="text" id="categoryInput" placeholder="Enter a Category" (keypress)="addCategory($event)" [(ngModel)]="inputCategoryValue">
+      <i class="fa fa-plus" aria-hidden="true" (click)="addCategoryMouse()"></i>
     </div>
-    <div id="categories" *ngFor="let category of budget; let i = index">
-      <div class="category">
-        <span><strong>Category</strong></span>
-        <span><strong>Total</strong></span>
-      </div>
-      <div id="category{{i}}" class="category">
+    <div class="category">
+      <span><strong>Category</strong></span>
+      <span><strong>Purchase</strong></span>
+      <span><strong>Quantity</strong></span>
+      <span><strong>Price</strong></span>
+      <span><strong>Total</strong></span>
+      <span><strong>Notes</strong></span>
+      <span><strong>Delete</strong></span>
+    </div>
+    <div id="categories" *ngFor="let category of budget; let pi = index">
+      <div id="category{{pi}}" class="category">
         <span>{{category.categoryName}}</span>
+        <span>-</span>
+        <span>-</span>
+        <span>-</span>
         <span>{{category.total}}</span>
+        <span>-</span>
+        <span (click)="deleteCategory(pi)"><i class="fa fa-times" aria-hidden="true"></i></span>
       </div>
-      <div class="categoryItem">
-        <span><strong>Purchase</strong></span>
-        <span><strong>Quantity</strong></span>
-        <span><strong>Price</strong></span>
-        <span><strong>Notes</strong></span>
-      </div>
-      <div id="categoryItem{{i}}" class="categoryItem" *ngFor="let item of budget[i].items">
+      <!--<div class="categoryItem">-->
+        <!--<span><strong>Purchase</strong></span>-->
+        <!--<span><strong>Quantity</strong></span>-->
+        <!--<span><strong>Price</strong></span>-->
+        <!--<span><strong>Notes</strong></span>-->
+      <!--</div>-->
+      <div id="categoryItem{{pi}}" class="categoryItem" *ngFor="let item of budget[pi].items; let i = index;">
+        <span>-</span>
         <span>{{item.purchase}}</span>
         <span>{{item.quantity}}</span>
         <span>{{item.price}}</span>
+        <span>-</span>
         <span>{{item.notes}}</span>
+        <span><i class="fa fa-times" aria-hidden="true" (click)="deleteItem(pi, i)"></i></span>
+      </div>
+      <div class="addItem">
+        <span>Add a Item</span>
+        <input type="text" placeholder="Enter a Purchase" (keypress)="addItem(pi, $event)" [(ngModel)]="inputPurchaseValue">
+        <input type="text" placeholder="Enter a Quantity" (keypress)="addItem(pi, $event)" [(ngModel)]="inputQuantityValue">
+        <input type="text" placeholder="Enter a Price" (keypress)="addItem(pi, $event)" [(ngModel)]="inputPriceValue">
+        <span>$0.00</span>
+        <input type="text" placeholder="Enter an Notes" (keypress)="addItem(pi, $event)" [(ngModel)]="inputNotesValue">
+        <span><i class="fa fa-plus" aria-hidden="true" (click)="addItemMouse(pi)"></i></span>
       </div>
     </div>
   </div>
