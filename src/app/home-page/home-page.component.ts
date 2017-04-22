@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthService} from '../angular-fire/auth-service.service';
 import {Router} from '@angular/router';
+import {AuthService} from "../angular-fire/auth-service.service";
 
 
 @Component({
@@ -11,8 +11,8 @@ import {Router} from '@angular/router';
 export class HomePageComponent implements OnInit {
 
   user: any;
-  err: any;
-  constructor(private _auth: AuthService, private router: Router) {
+
+  constructor(private router: Router, private _data: AuthService) {
 
 
   }
@@ -27,18 +27,8 @@ export class HomePageComponent implements OnInit {
   }
 
   registerUser() {
-    this._auth.registerUser(this.user).subscribe(registerData => {
-      this._auth.loginWithEmail(registerData).subscribe(loginData => {
-          this.router.navigate(['../dashboardPage']);
-      }, loginError => {
-
-          this.err = loginError;
-
-      });
-    }, registerError => {
-      this.err = registerError;
-    });
-
+      this._data.registerUser(this.user);
+      this.router.navigate(['../dashboardPage']);
   }
 
 
