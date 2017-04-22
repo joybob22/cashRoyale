@@ -9,7 +9,7 @@
     <div class="checkbookError" *ngIf="checkbookError"><p>{{checkbookErrorMessage}}</p></div>
   </div>
   <div id="createItemContainer">
-    <h1>Create checkbook item for (add which checkbook here)</h1>
+    <h1>Create checkbook item for {{checkbooks[checkbookIndex].name}}</h1>
     <div class="inputItem">
       <h4>Date:</h4>
       <input class="inputBox" type="text" placeholder="Date" [(ngModel)]="date">

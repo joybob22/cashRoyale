@@ -20,6 +20,7 @@ export class DatabaseService {
     this.firebaseUsers = af.database.list("/users"); // + "/" + _auth.uId + "/topics");
     this.firebaseUsers.subscribe(data => {
       this.users = data;
+      console.log(data[1]);
     });
   }
 

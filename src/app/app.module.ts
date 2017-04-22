@@ -63,7 +63,7 @@ export function highChartsFactory() {
           { path: 'defaultDashboardPage', component: DefaultDashboardPageComponent},
           { path: 'checkbookPage', component: CheckbookPageComponent},
           { path: 'budgetPage', component: BudgetPageComponent},
-          { path: 'addCheckbook', component: AddCheckbookComponent},
+          { path: 'addCheckbook/:index', component: AddCheckbookComponent},
           { path: '', redirectTo: 'defaultDashboardPage', pathMatch: 'full'}
         ]
       },
