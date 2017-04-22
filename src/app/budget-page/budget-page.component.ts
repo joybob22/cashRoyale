@@ -79,6 +79,10 @@ export class BudgetPageComponent implements OnInit {
             category: this.budget[parentIndex].categoryName, purchase: this.inputPurchaseValue,
             quantity: this.inputQuantityValue, price: this.inputPriceValue, notes: this.inputNotesValue
           });
+          this.inputPurchaseValue = '';
+          this.inputQuantityValue = null;
+          this.inputPriceValue = '';
+          this.inputNotesValue = '';
         }
       }
     }
