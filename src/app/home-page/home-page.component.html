@@ -8,7 +8,9 @@
     <div class="ccparallaxeff">
       <div class="header">
         <img src="../../assets/cashRoyaleLogo.png" class="logo">
+        <a [routerLink]="['../loginPage']" class="myButton" id="loginButton">Login</a>
         <a href="#signup" class="myButton" id="signupButton">Sign Up</a>
+
       </div>
       <div class="crt-parallaxvideo">
         <video autoplay muted loop>
@@ -46,11 +48,14 @@
           </div>
           <div class="signupForm">
             <form>
-              <div>
-                Email <input id="email" type="email" ng-model="firstname">
+              <div class="form-group">
+                Name <input id="name"  class="form-control" name="name" type="email" [(ngModel)]="user.name">
               </div>
-              <div>
-                Password <input type="password" ng-model="password">
+              <div class="form-group">
+                Email <input id="email"  class="form-control" name="email" type="email" [(ngModel)]="user.email">
+              </div>
+              <div class="form-group">
+                Password <input type="password" class="form-control" name="password" [(ngModel)]="user.password">
               </div>
               <a href="#signup" class="myButton" id="linkSignIn">Sign Up</a>
             </form>
