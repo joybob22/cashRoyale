@@ -1,11 +1,174 @@
-@import '../app.component.scss';
-body{
-  background-color: $background;
+@import '../../styles.scss';
+
+.container {
+  font-size: 16px;
+  max-width: 960px;
+  margin: 0 auto;
 }
-.container{
-    width: 80%;
-    margin: 0 auto;
-  header{
-    background-color: $lightBlue;
+
+.crt-parallaxvideo{
+  height: 500px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+
+}
+.crt-parallaxvideo video{
+  min-width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: -100;
+
+}
+.crt-parallaxvideo h1 {
+  color: white;
+  font-family: $headFontSize;
+  font-size: 64px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.plax.ccparallax-three {
+  background-image: url("../../assets/ferdinand-stohr-149422.jpg");
+}
+
+
+.plax:last-child {
+  margin-bottom: 0;
+}
+.plax.ccparallax {
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 50vh;
+  padding-top: 50vh;
+}
+.plax.content {
+  background: none repeat scroll 0 0 #2581e8;
+  padding: 42px 0;
+
+}
+
+.plax .headlines h1 {
+  color: #fff;
+  font-family: $largeFont;
+  font-size: $headFontSize;
+  margin: 0;
+  text-align: center;
+}
+
+h3{
+  font-size: $subFontSize;
+}
+
+.motivList{
+  padding-top: 20px;
+  .motivListItem{
+     padding: 15px 0 0 30px;
+   }
+}
+.stupidLeftContainer{
+  margin: 5% auto auto 15%;
+  h3{
+    color: white;
   }
 }
+
+.signUp{
+  display: flex;
+  width: 80%;
+  .signupCaption{
+    margin: auto;
+    color: white;
+    font-family: $largeFont;
+    font-size: $subFontSize;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .signupForm{
+    margin: 0 auto;
+    padding: 10px;
+    border: 2px solid #5b5b5b;
+    border-radius: 8px;
+    div{
+      margin: 8px auto;
+      #email{
+        margin-left: 32px;
+      }
+    }
+  }
+}
+
+.header{
+  .logo{
+    width: 80px;
+  }
+  .myButton {
+    float: right;
+    margin: 10px 15px auto auto;
+    background-color:transparent;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border-radius:15px;
+    border:1px solid #d6bcd6;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family: $subFontSize;
+    font-size:18px;
+    padding:7px 25px;
+    text-decoration:none;
+  }
+  .myButton:hover {
+    background-color:transparent;
+  }
+  .myButton:active {
+    position:relative;
+    top:1px;
+  }
+}
+
+.intro{
+  text-align: center;
+  color: white;
+  h3{
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    height: auto;
+    font-size: 24px;
+  }
+}
+
+.examples{
+  display: inline;
+  margin-left: 25px;
+}
+.graphIMG {
+  padding: 15px;
+  width: 400px;
+  height: auto;
+}
+@media (max-width: 667px) {
+  //not triggering after the .container for an unknown reason, ask mario
+  .container{
+    width: 85%;
+  }
+  .signupCaption{
+    font-size: 5px;
+  }
+  .signupForm {
+    margin: 0 auto;
+    padding: 10px;
+    border: 2px solid #5b5b5b;
+    border-radius: 8px;
+    div {
+      margin: 8px auto;
+      #email {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+
+

@@ -12,13 +12,143 @@ html, body {
 html, body {
   height: 100%; }
 
-body {
-  background-color: #EDF7F2; }
-
 .container {
-  width: 80%;
+  font-size: 16px;
+  max-width: 960px;
   margin: 0 auto; }
-  .container header {
-    background-color: #7FC6BC; }
+
+.crt-parallaxvideo {
+  height: 500px;
+  padding-bottom: 50px;
+  padding-top: 50px; }
+
+.crt-parallaxvideo video {
+  min-width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: -100; }
+
+.crt-parallaxvideo h1 {
+  color: white;
+  font-family: 48px;
+  font-size: 64px;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.plax.ccparallax-three {
+  background-image: url("../../assets/ferdinand-stohr-149422.jpg"); }
+
+.plax:last-child {
+  margin-bottom: 0; }
+
+.plax.ccparallax {
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 50vh;
+  padding-top: 50vh; }
+
+.plax.content {
+  background: none repeat scroll 0 0 #2581e8;
+  padding: 42px 0; }
+
+.plax .headlines h1 {
+  color: #fff;
+  font-family: "Asap", sans-serif;
+  font-size: 48px;
+  margin: 0;
+  text-align: center; }
+
+h3 {
+  font-size: 24px; }
+
+.motivList {
+  padding-top: 20px; }
+  .motivList .motivListItem {
+    padding: 15px 0 0 30px; }
+
+.stupidLeftContainer {
+  margin: 5% auto auto 15%; }
+  .stupidLeftContainer h3 {
+    color: white; }
+
+.signUp {
+  display: flex;
+  width: 80%; }
+  .signUp .signupCaption {
+    margin: auto;
+    color: white;
+    font-family: "Asap", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .signUp .signupForm {
+    margin: 0 auto;
+    padding: 10px;
+    border: 2px solid #5b5b5b;
+    border-radius: 8px; }
+    .signUp .signupForm div {
+      margin: 8px auto; }
+      .signUp .signupForm div #email {
+        margin-left: 32px; }
+
+.header .logo {
+  width: 80px; }
+.header .myButton {
+  float: right;
+  margin: 10px 15px auto auto;
+  background-color: transparent;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  border: 1px solid #d6bcd6;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 24px;
+  font-size: 18px;
+  padding: 7px 25px;
+  text-decoration: none; }
+.header .myButton:hover {
+  background-color: transparent; }
+.header .myButton:active {
+  position: relative;
+  top: 1px; }
+
+.intro {
+  text-align: center;
+  color: white; }
+  .intro h3 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    height: auto;
+    font-size: 24px; }
+
+.examples {
+  display: inline;
+  margin-left: 25px; }
+
+.graphIMG {
+  padding: 15px;
+  width: 400px;
+  height: auto; }
+
+@media (max-width: 667px) {
+  .container {
+    width: 85%; }
+
+  .signupCaption {
+    font-size: 5px; }
+
+  .signupForm {
+    margin: 0 auto;
+    padding: 10px;
+    border: 2px solid #5b5b5b;
+    border-radius: 8px; }
+    .signupForm div {
+      margin: 8px auto; }
+      .signupForm div #email {
+        margin-left: 0; } }
 
 /*# sourceMappingURL=home-page.component.css.map */
