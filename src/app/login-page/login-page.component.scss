@@ -1,1 +1,10 @@
 @import '../app.component.scss';
+
+.container {
+  height: 100%;
+  background-image: url('../../assets/sittingLady.jpg');
+  background-size: cover;
+  background-color: #ffffff;
+  background-position: bottom;
+
+}
