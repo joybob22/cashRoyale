@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from "../angular-fire/auth-service.service";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -10,17 +11,36 @@ import {AuthService} from "../angular-fire/auth-service.service";
 export class HomePageComponent implements OnInit {
 
   user: any;
-  constructor(private _auth: AuthService) {
+  err: any;
+  constructor(private _auth: AuthService, private router: Router) {
 
 
   }
 
   ngOnInit() {
     this.user = {
-      name: "",
-      email: "",
-      password:""
+
+        password:"",
+        email: "",
+
+      name: ""
     }
   }
+
+  registerUser(){
+    this._auth.registerUser(this.user).subscribe(registerData => {
+      this._auth.loginWithEmail(registerData).subscribe(loginData => {
+          this.router.navigate(['../dashboardPage']);
+      }, loginError => {
+
+          this.err = loginError;
+
+      });
+    }, registerError => {
+      this.err = registerError;
+    });
+
+  }
+
 
 }

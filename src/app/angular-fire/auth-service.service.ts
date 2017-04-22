@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import {AuthProviders, AngularFireAuth, FirebaseAuthState, AuthMethods, AngularFire} from 'angularfire2';
 import { Observable } from 'rxjs/Observable';
+import {DatabaseService} from "./database.service";
+
 
 @Injectable()
 export class AuthService{
   private authState: FirebaseAuthState;
 
-  constructor(public auth$: AngularFireAuth, public ang: AngularFire) {
+  constructor(public auth$: AngularFireAuth, public ang: AngularFire, private _database: DatabaseService) {
 
     this.authState = auth$.getAuth();
     auth$.subscribe((state: FirebaseAuthState) => {
@@ -25,19 +27,50 @@ export class AuthService{
   }
 
   registerUser(credentials: any) {
-
+console.log(credentials);
     return Observable.create(observer => {
-      this.ang.auth.createUser(credentials).then((authData: any) => {
+      this.ang.auth.createUser({email: credentials.email, password: credentials.password}).then((authData: any) => {
+        console.log(authData);
         this.ang.database.list('users').update(authData.uid, {
-          name: authData.auth.name,
-          email: authData.auth.email,
-          emailVerified: false,
+          name: credentials.name,
+          email:"myemail@email.com",
           provider: 'email',
-          image: '//////url///////',
+          checkbooks: [{
+            name: 'vacation',
+            items: [{
+              date: '1/12/2017',
+              add: true,
+              money: 420,
+              description: 'stuff',
+              newAmount: 520
+            }]
+          }, {
+            name: 'other',
+            items: [{
+              date: '1/12/2017',
+              add: true,
+              money: 420,
+              description: 'stuff',
+              newAmount: 520}]}],
+          budget: [{
+            categoryName: 'stuff',
+            items: [{
+              category: 'stuff',
+              purchase: 'vegetables',
+              quantity: 3,
+              price: '$12',
+              notes: 'git gud'
+            }],
+            total: '$36'
+          }, {
+
+          }]
 
         });
+        console.log(authData);
         credentials.created = true;
         observer.next(credentials);
+        console.log('yes');
       }).catch((error: any) => {
         if (error) {
           console.log(error);
