@@ -12,22 +12,6 @@ import {AngularFire, FirebaseListObservable} from "angularfire2";
 @Injectable()
 export class DatabaseService {
 
-  users: any[];
-  firebaseUsers: FirebaseListObservable<any[]>;
-  constructor(public http: Http, public af: AngularFire) { //private _auth: AuthService
-    console.log('Hello FirebaseService Provider');
 
-    this.firebaseUsers = af.database.list("/users"); // + "/" + _auth.uId + "/topics");
-    this.firebaseUsers.subscribe(data => {
-      this.users = data;
-      console.log(data[1]);
-    });
-  }
-
-  getUsers(){
-    return this.firebaseUsers.subscribe(data => {
-      this.users= data;
-    })
-  }
 
 }
