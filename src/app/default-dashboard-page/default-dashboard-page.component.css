@@ -7,7 +7,7 @@
     margin-top: 60px;
     display: inline-block; }
   @media screen and (max-width: 1450px) {
-    #dashboardPageDefault chart {
+    #dashboardPageDefault .triggerDiv {
       display: block; } }
 
 /*# sourceMappingURL=default-dashboard-page.component.css.map */
