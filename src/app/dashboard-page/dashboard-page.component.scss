@@ -59,7 +59,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
 
   #mainContent {
     margin:   0 0 0 120px;
-    width: 100%;
+    width: calc(100% - 120px);
     display: inline-block;
   }
 
