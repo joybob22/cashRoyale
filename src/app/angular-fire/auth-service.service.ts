@@ -24,15 +24,7 @@ export class AuthService{
     return this.auth$.getAuth().uid;
   }
 
-  signInWithGoogle(): firebase.Promise<FirebaseAuthState> {
-    return this.auth$.login({
-      provider: AuthProviders.Google,
-      method: AuthMethods.Popup
-    })
-  }
-
   registerUser(credentials: any) {
-
 
     return Observable.create(observer => {
       this.ang.auth.createUser(credentials).then((authData: any) => {
