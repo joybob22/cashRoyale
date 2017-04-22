@@ -55,7 +55,7 @@ html, body {
 
 .plax .headlines h1 {
   color: #fff;
-  font-family: "Asap", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 48px;
   margin: 0;
   text-align: center; }
@@ -79,7 +79,7 @@ h3 {
   .signUp .signupCaption {
     margin: auto;
     color: white;
-    font-family: "Asap", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 24px;
     font-weight: 700;
     text-transform: uppercase; }
