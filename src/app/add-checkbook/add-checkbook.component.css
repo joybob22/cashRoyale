@@ -49,5 +49,9 @@ html, body {
     padding-bottom: 50px; }
     #container #createItemContainer .inputItem {
       margin-top: 10px; }
+  #container .checkbookError {
+    color: red;
+    margin-top: 15px;
+    margin-left: 100px; }
 
 /*# sourceMappingURL=add-checkbook.component.css.map */

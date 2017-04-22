@@ -12,11 +12,6 @@ html, body {
 html, body {
   height: 100%; }
 
-#checkBookMainContainer {
-  background-color: #EDF7F2;
-  height: 1000px;
-  overflow: hidden; }
-
 .overlay {
   height: 100%;
   width: 100%;
@@ -80,6 +75,12 @@ html, body {
     #checkbookContent .checkbookContent .checkbookItem {
       width: 300px;
       text-align: center; }
+    #checkbookContent .checkbookContent i {
+      position: absolute;
+      right: 5px;
+      font-size: 20px; }
+    #checkbookContent .checkbookContent i:hover {
+      cursor: pointer; }
 
 .slidingMenu {
   background: #96CA2D;

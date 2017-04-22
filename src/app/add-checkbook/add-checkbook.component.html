@@ -6,6 +6,7 @@
       <input class="inputBox" type="text" placeholder="Checkbook Name" [(ngModel)]="checkbookName">
     </div>
     <div class="submitButton" (click)="addNewCheckbook()">Submit</div>
+    <div class="checkbookError" *ngIf="checkbookError"><p>{{checkbookErrorMessage}}</p></div>
   </div>
   <div id="createItemContainer">
     <h1>Create checkbook item for (add which checkbook here)</h1>
@@ -30,6 +31,7 @@
 
 
     <div class="submitButton" (click)="addNewItem()">Submit</div>
+    <div class="checkbookError" *ngIf="itemError"><p>{{itemErrorMessage}}</p></div>
   </div>
 
 </div>
