@@ -35,7 +35,8 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
     height: 70px;
     vertical-align: middle; }
   #dashboardPage #topNav .leftTopNavIMG {
-    height: 60px; }
+    height: 60px;
+    background-color: #296c83; }
 #dashboardPage #sideNav {
   position: absolute;
   text-align: center;
@@ -54,7 +55,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
       display: block;
       width: 100%; }
 #dashboardPage #mainContent {
-  margin: 60px 0 0 180px;
+  margin-left: 61px;
   width: 100%;
   display: inline-block; }
 @media screen and (max-width: 850px) {
