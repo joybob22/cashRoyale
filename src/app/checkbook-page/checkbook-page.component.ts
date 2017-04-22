@@ -52,6 +52,7 @@ export class CheckbookPageComponent implements OnInit {
   }
 
   ngOnInit() {
+
   }
 
 }
