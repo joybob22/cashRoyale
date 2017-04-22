@@ -97,6 +97,15 @@ h3{
       #email{
         margin-left: 32px;
       }
+      #name{
+        margin-left: 27px;
+      }
+    }
+    .ng-valid[required], .ng-valid.required  {
+      border-left: 5px solid #42A948; /* green */
+    }
+    .ng-invalid:not(form)  {
+      border-left: 5px solid #a94442; /* red */
     }
   }
 }
@@ -113,7 +122,7 @@ h3{
   -moz-border-radius:15px;
   -webkit-border-radius:15px;
   border-radius:15px;
-  border:1px solid #d6bcd6;
+  border:1px solid white;
   display:inline-block;
   cursor:pointer;
   color:#ffffff;

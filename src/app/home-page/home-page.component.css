@@ -94,6 +94,14 @@ h3 {
       margin: 8px auto; }
       .signUp .signupForm div #email {
         margin-left: 32px; }
+      .signUp .signupForm div #name {
+        margin-left: 27px; }
+    .signUp .signupForm .ng-valid[required], .signUp .signupForm .ng-valid.required {
+      border-left: 5px solid #42A948;
+      /* green */ }
+    .signUp .signupForm .ng-invalid:not(form) {
+      border-left: 5px solid #a94442;
+      /* red */ }
 
 .header .logo {
   width: 80px; }
@@ -105,7 +113,7 @@ h3 {
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
   border-radius: 15px;
-  border: 1px solid #d6bcd6;
+  border: 1px solid white;
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
