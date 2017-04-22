@@ -1,19 +1,21 @@
 @import '../app.component.scss';
-
+body, html {
+  overflow: hidden;
+}
 html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
   margin: 0;
   padding: 0;
   border: 0;
   text-decoration: none;
   font-family: 'Open Sans', sans-serif;
-  overflow: hidden;
 }
 
 #dashboardPage {
   #topNav {
+    margin-left: 120px;
     color: white;
     height: 60px;
-    width: 100%;
+    width: calc(100% - 120px);
     h4 {
       float: right;
       margin-top: 20px;
@@ -26,34 +28,41 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
       vertical-align: middle;
     }
     background-color: $darkBlue;
-    .leftTopNavIMG {
-      height: 60px;
-      background-color: #296c83;
-    }
+
   }
   #sideNav {
-    position: absolute;
+    top: 0;
+    position: fixed;
   text-align: center;
     background-color: #273038;
     width: 120px;
     height: calc(100vh - 60px);
 
+    .leftTopNavIMG {
+      width: 100%;
+
+      background-color: #296c83;
+    }
+    #close-button {
+      display: none;
+    }
     a {
       text-decoration: none;
       color: white;
       :hover {
         background-color: #4BB5C1;
       }
-      .nav-item.first {
-       margin-top: 60px;
-      }
+
       .nav-item {
         padding: 25px 0;
         display: block;
-        width: 100%;
+      }
+      .nav-item.first {
+        margin-top: -5px;
       }
 
     }
+
 
   }
 
@@ -77,6 +86,16 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
       position: fixed;
       text-align: left;
 
+      .leftTopNavIMG {
+        max-width: 100px;
+      }
+
+      #close-button {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+      }
+
       a .nav-item {
         padding-left: 30px;
       }
@@ -84,9 +103,11 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
     #mainContent {
       text-align: center;
       margin: 60px auto 0 auto;
+
     }
     #topNav {
-
+      margin-left: 0;
+      width: 100%;
       i.fa {
         display: inline-block;
       }
