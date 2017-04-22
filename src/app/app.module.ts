@@ -18,6 +18,7 @@ import { DefaultDashboardPageComponent } from './default-dashboard-page/default-
 import { AuthService } from './angular-fire/auth-service.service';
 import {HighchartsStatic} from "angular2-highcharts/dist/HighchartsService";
 import { AddCheckbookComponent } from './add-checkbook/add-checkbook.component';
+import {DatabaseService} from "./angular-fire/database.service";
 
 
 export const firebaseConfig = {
@@ -72,7 +73,9 @@ export function highChartsFactory() {
     ChartModule,
     AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [AuthService,
+  providers: [
+    DatabaseService,
+    AuthService,
     { provide: HighchartsStatic,
       useFactory: highChartsFactory},
   ],
