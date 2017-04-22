@@ -84,7 +84,6 @@ export class AddCheckbookComponent implements OnInit {
       } else {
         amount = 0 - Number(this.money);
       }
-
     }
 
     this.checkbooks[this.checkbookIndex].items.unshift({

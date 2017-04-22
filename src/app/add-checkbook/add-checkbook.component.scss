@@ -2,6 +2,29 @@
 
 #container {
   background-color: $background;
+  .inputBox {
+    width: 80%;
+    height: 20px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    padding-left: 5px;
+    margin-top: 5px;
+  }
+  #createCheckbookContainer {
+    padding-left: 10px;
+    width: 100%;
+    h4 {
+      margin-top: 10px;
+    }
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 50px;
+    padding-top: 20px;
+  }
+
+  #createItemContainer {
+    overflow: hidden;
+  }
   .submitButton {
     padding: 5px 20px;
     background-color: $darkGreen;
@@ -15,7 +38,13 @@
   }
 
   #createItemContainer {
-    margin-top: 300px;
-    margin-left: 10px;
+    padding-top: 50px;
+    padding-left: 10px;
+    .inputItem {
+      margin-top: 10px;
+    }
+    border-bottom: 1px solid #DDDDDD;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
   }
 }
