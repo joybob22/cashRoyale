@@ -1,13 +1,16 @@
 #dashboardPageDefault {
+  display: flex;
   width: 100%;
-  text-align: center;
-  display: flex; }
+  text-align: center; }
   #dashboardPageDefault chart {
     margin: 30px;
     margin-top: 60px;
     display: inline-block; }
-  @media screen and (max-width: 1450px) {
-    #dashboardPageDefault chart {
+
+@media screen and (max-width: 1450px) {
+  #dashboardPageDefault {
+    display: block; }
+    #dashboardPageDefault .triggerDiv {
       display: block; } }
 
 /*# sourceMappingURL=default-dashboard-page.component.css.map */

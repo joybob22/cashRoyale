@@ -65,7 +65,7 @@ export class DefaultDashboardPageComponent implements OnInit {
         type: 'pie'
       },
       title: {
-        text: 'Browser market shares January, 2015 to May, 2015'
+        text: 'Your Budget'
       },
       tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -84,27 +84,27 @@ export class DefaultDashboardPageComponent implements OnInit {
         }
       },
       series: [{
-        name: 'Brands',
+        name: 'Categories',
         colorByPoint: true,
         data: [{
-          name: 'Microsoft Internet Explorer',
+          name: 'Groceries',
           y: 56.33
         }, {
-          name: 'Chrome',
+          name: 'Housing/Utilities',
           y: 24.03,
           sliced: true,
           selected: true
         }, {
-          name: 'Firefox',
+          name: 'Emergency Fund',
           y: 10.38
         }, {
-          name: 'Safari',
+          name: 'Entertainment',
           y: 4.77
         }, {
-          name: 'Opera',
+          name: 'Debt',
           y: 0.91
         }, {
-          name: 'Proprietary or Undetectable',
+          name: 'Savings',
           y: 0.2
         }]
       }]

@@ -1,11 +1,11 @@
 <div id="dashboardPageDefault">
-  <a [routerLink]="['../checkbookPage']">
+  <a class="triggerDiv" [routerLink]="['../checkbookPage']">
 
     <chart [options]="checkingOptions"></chart>
 
   </a>
-
-  <a [routerLink]="['../budgetPage']">
+<hr>
+  <a class="triggerDiv" [routerLink]="['../budgetPage']">
     <chart [options]="budgetOptions"></chart>
   </a>
 

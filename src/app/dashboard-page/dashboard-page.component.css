@@ -12,18 +12,21 @@ html, body {
 html, body {
   height: 100%; }
 
+body, html {
+  overflow: hidden; }
+
 html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
   margin: 0;
   padding: 0;
   border: 0;
   text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
-  overflow: hidden; }
+  font-family: 'Open Sans', sans-serif; }
 
 #dashboardPage #topNav {
+  margin-left: 120px;
   color: white;
   height: 60px;
-  width: 100%;
+  width: calc(100% - 120px);
   background-color: #4BB5C1; }
   #dashboardPage #topNav h4 {
     float: right;
@@ -34,28 +37,30 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
     padding: 20px;
     height: 70px;
     vertical-align: middle; }
-  #dashboardPage #topNav .leftTopNavIMG {
-    height: 60px;
-    background-color: #296c83; }
 #dashboardPage #sideNav {
-  position: absolute;
+  top: 0;
+  position: fixed;
   text-align: center;
   background-color: #273038;
   width: 120px;
-  height: calc(100vh - 60px); }
+  height: 100vh; }
+  #dashboardPage #sideNav .leftTopNavIMG {
+    width: 100%;
+    background-color: #296c83; }
+  #dashboardPage #sideNav #close-button {
+    display: none; }
   #dashboardPage #sideNav a {
     text-decoration: none;
     color: white; }
     #dashboardPage #sideNav a :hover {
       background-color: #4BB5C1; }
-    #dashboardPage #sideNav a .nav-item.first {
-      margin-top: 60px; }
     #dashboardPage #sideNav a .nav-item {
       padding: 25px 0;
-      display: block;
-      width: 100%; }
+      display: block; }
+    #dashboardPage #sideNav a .nav-item.first {
+      margin-top: -5px; }
 #dashboardPage #mainContent {
-  margin-left: 121px;
+  margin: 0 0 0 120px;
   width: calc(100% - 120px);
   display: inline-block; }
 @media screen and (max-width: 850px) {
@@ -69,12 +74,22 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
     display: inline-block;
     position: fixed;
     text-align: left; }
+    #dashboardPage #sideNav.sidenav-open .leftTopNavIMG {
+      max-width: 100px; }
+    #dashboardPage #sideNav.sidenav-open #close-button {
+      color: white;
+      width: 100px;
+      height: 100px;
+      display: inline-block; }
     #dashboardPage #sideNav.sidenav-open a .nav-item {
       padding-left: 30px; }
   #dashboardPage #mainContent {
     text-align: center;
-    margin: 0 0 0 120px; }
-  #dashboardPage #topNav i.fa {
-    display: inline-block; } }
+    margin: 0 auto; }
+  #dashboardPage #topNav {
+    margin-left: 0;
+    width: 100%; }
+    #dashboardPage #topNav i.fa {
+      display: inline-block; } }
 
 /*# sourceMappingURL=dashboard-page.component.css.map */

@@ -23,6 +23,8 @@ export class DashboardPageComponent implements OnInit {
 
   }
 
+
+
   toggleNav(){
     this.open = !this.open;
   }

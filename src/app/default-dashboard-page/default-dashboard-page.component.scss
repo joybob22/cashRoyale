@@ -1,17 +1,27 @@
 
 #dashboardPageDefault {
+display: flex;
   width: 100%;
   text-align: center;
-  display: flex;
   chart {
     margin: 30px;
     margin-top: 60px;
     display: inline-block;
   }
-  @media screen and (max-width: 1450px) {
-    chart {
+
+  .br-fix {
+
+  }
+
+
+
+}
+@media screen and (max-width: 1450px) {
+
+  #dashboardPageDefault {
+   display: block;
+    .triggerDiv {
       display: block;
     }
   }
-
 }

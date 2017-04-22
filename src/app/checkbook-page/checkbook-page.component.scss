@@ -1,10 +1,19 @@
 @import "../../styles.scss";
 
 #checkBookMainContainer {
-  margin: 0 0 0 60px;
   background-color: $background;
   height: 1000px;
   overflow: hidden;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  position: fixed;
+  top:0;
+  left: 0;
 }
 
 .header {
@@ -37,7 +46,14 @@
       color: $darkGreen;
       font-size: 15px;
     }
+    i:hover {
+      cursor: pointer;
+    }
   }
+
+}
+.addingCheckbook:hover {
+  cursor: pointer;
 }
 
 #checkbookHeader {
@@ -101,10 +117,25 @@
   }
 }
 .checkbooks {
-  margin: 20px 0 0 10px;
+  padding: 10px 0 10px 10px;
+}
+
+.checkbooks:hover {
+  background-color: $lightGreen;
+  cursor: pointer;
 }
 
 
+.x {
+  position: absolute;
+  right: 5px;
+  color: white;
+  font-size: 20px;
+}
+
+.x:hover {
+  cursor: pointer;
+}
 
 
 
