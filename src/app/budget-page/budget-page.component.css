@@ -63,8 +63,9 @@ html, body {
         text-align: center; }
       #budgetContent #budget .addItem input {
         margin: 0;
-        padding: 0;
-        width: 200px; }
+        padding: 0 0 0 10px;
+        width: 200px;
+        box-sizing: border-box; }
     #budgetContent #budget .category, #budgetContent #budget .categoryItem {
       height: 60px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.08);
