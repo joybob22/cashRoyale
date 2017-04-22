@@ -1,7 +1,12 @@
 <div id="dashboardPageDefault">
   <a [routerLink]="['../checkbookPage']">
 
-    <chart [options]="options"></chart>
+    <chart [options]="checkingOptions"></chart>
+
+  </a>
+
+  <a [routerLink]="['../budgetPage']">
+    <chart [options]="budgetOptions"></chart>
   </a>
 
 </div>
