@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {AngularFire, AngularFireDatabase, FirebaseListObservable} from "angularfire2";
 import {AuthService} from "../angular-fire/auth-service.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-dashboard-page',
@@ -12,27 +12,16 @@ export class DashboardPageComponent implements OnInit {
   user: object;
   open: boolean;
 
-  key: any;
 
-  users: FirebaseListObservable<any>;
-  firebaseUser: any;
-
-  constructor(public af: AngularFire, private _auth: AuthService ) {
-
-    this.firebaseUser = af.database.list("/users");
-    this.firebaseUser.subscribe(data => {
-      this.users = data;
-          console.log(data);
-          //data[1]
-    });
-
-
-
-
+  constructor( private _data: AuthService, private router: Router) {
 
   }
 
   ngOnInit() {
+
+    if(!this._data.userExists){
+      this.router.navigate(['../homePage']);
+    }
 
     this.user = {
       time: 'Good Morning',
