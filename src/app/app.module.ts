@@ -20,7 +20,6 @@ import {HighchartsStatic} from "angular2-highcharts/dist/HighchartsService";
 import { AddCheckbookComponent } from './add-checkbook/add-checkbook.component';
 import {DatabaseService} from "./angular-fire/database.service";
 
-
 export const firebaseConfig = {
   apiKey: "AIzaSyD2ySAfpDimxQ1cIMlbmajh8nGN1vyAzV0",
   authDomain: "cash-royale.firebaseapp.com",
