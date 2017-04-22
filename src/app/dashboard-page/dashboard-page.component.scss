@@ -36,7 +36,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
   text-align: center;
     background-color: #273038;
     width: 120px;
-    height: calc(100vh - 60px);
+    height: 100vh;
 
     .leftTopNavIMG {
       width: 100%;
@@ -91,6 +91,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
       }
 
       #close-button {
+        color: white;
         width: 100px;
         height: 100px;
         display: inline-block;
@@ -102,7 +103,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
     }
     #mainContent {
       text-align: center;
-      margin: 60px auto 0 auto;
+      margin: 0 auto;
 
     }
     #topNav {
