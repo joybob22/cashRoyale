@@ -68,16 +68,16 @@ export class BudgetPageComponent implements OnInit {
       }
     }
   }
-  calcCategoryTotal(parentIndex): void {
-    for (let i = 0, l = this.budget[parentIndex].items.length; i < l; i ++) {
-      this.budget[parentIndex].items[i].total = this.budget[parentIndex].items[i].total.slice(1);
-      console.log(this.budget[parentIndex].items[i].total);
-      let myNumber: number = Number(this.budget[parentIndex].items[i].total);
-      console.log(myNumber);
-      this.categoryTotal += myNumber;
-      console.log(this.categoryTotal);
-    }
-  }
+  // calcCategoryTotal(parentIndex): void {
+  //   for (let i = 0, l = this.budget[parentIndex].items.length; i < l; i ++) {
+  //     this.budget[parentIndex].items[i].total = this.budget[parentIndex].items[i].total.slice(1);
+  //     let rest: any = this.budget[parentIndex].items[i].total;
+  //     rest = Number(rest);
+  //     console.log(this.budget[parentIndex].items[i].total);
+  //     this.categoryTotal += rest;
+  //     console.log(this.categoryTotal);
+  //   }
+  // }
   addItemMouse(parentIndex): void {
     if (this.inputPurchaseValue !== undefined && this.inputQuantityValue !== undefined &&
       this.inputPriceValue !== undefined && this.inputNotesValue !== undefined) {
