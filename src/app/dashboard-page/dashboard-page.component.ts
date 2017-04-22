@@ -11,10 +11,11 @@ export class DashboardPageComponent implements OnInit {
 
   user: object;
   open: boolean;
+  userData: any;
 
 
   constructor( private _data: AuthService, private router: Router) {
-
+      this.userData = _data.userData;
   }
 
   ngOnInit() {
