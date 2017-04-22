@@ -1,9 +1,7 @@
 @import "../../styles.scss";
 
 #checkBookMainContainer {
-  background-color: $background;
-  height: 1000px;
-  overflow: hidden;
+
 }
 
 .overlay {
@@ -84,6 +82,14 @@
     .checkbookItem {
       width: 300px;
       text-align: center;
+    }
+    i {
+      position: absolute;
+      right: 5px;
+      font-size: 20px;
+    }
+    i:hover {
+      cursor: pointer;
     }
   }
 }

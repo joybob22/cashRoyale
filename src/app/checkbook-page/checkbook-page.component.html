@@ -12,7 +12,7 @@
   </div>
   <div id="checkbookHeader">
     <div id="checkbookHeaderWords">
-      <h1>Checkbook Title</h1>
+      <h1>{{checkbookTitle}}</h1>
     </div>
   </div>
 
@@ -24,11 +24,11 @@
   </div>
 
   <div id="checkbookContent">
-    <div class="checkbookContent" *ngFor="let checkbook of checkbookData;">
+    <div class="checkbookContent" *ngFor="let checkbook of checkbooks[checkbookIndex].items; let i = index">
       <p class="checkbookItem">{{checkbook.date}}</p>
-      <p class="checkbookItem">{{checkbook.money}}</p>
+      <p class="checkbookItem">{{checkbook.add}} {{checkbook.money}}</p>
       <p class="checkbookItem">{{checkbook.description}}</p>
-      <p class="checkbookItem">${{checkbook.newAmount}}</p>
+      <p class="checkbookItem">${{checkbook.newAmount}}<i class="fa fa-times" aria-hidden="true" (click)="deleteItem(i)"></i></p>
     </div>
   </div>
 
@@ -37,8 +37,9 @@
     <div id="menuHeader">
       <h1>Checkbooks</h1>
     </div>
-    <div class="checkbooks" *ngFor="let checkbook of checkbooks">
-      <p>{{checkbook}}</p>
+    <div class="checkbooks" *ngFor="let checkbook of checkbooks; let i = index;" (click)="switchCheckbook(i)">
+      <span>{{checkbook.name}}</span>
+      <i class="fa fa-times x" aria-hidden="true" (click)="deleteCheckbook(i)"></i>
     </div>
   </div>
 </div>
