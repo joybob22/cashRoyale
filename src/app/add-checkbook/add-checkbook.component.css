@@ -13,7 +13,8 @@ html, body {
   height: 100%; }
 
 #container {
-  background-color: #EDF7F2; }
+  background-color: #EDF7F2;
+  min-height: 100vh; }
   #container .inputBox {
     width: 80%;
     height: 20px;

@@ -13,7 +13,7 @@ public user: object;
 
 
 saveUserData () {
-localStorage.setItem('userData', JSON.stringify(this.userData));
+  localStorage.setItem('userData', JSON.stringify(this.userData));
 }
 get userExists(){
     if(this.userData) {

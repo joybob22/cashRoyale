@@ -12,6 +12,10 @@ html, body {
 html, body {
   height: 100%; }
 
+#checkBookMainContainer {
+  background-color: #EDF7F2;
+  min-height: 100vh; }
+
 .overlay {
   height: 100%;
   width: 100%;

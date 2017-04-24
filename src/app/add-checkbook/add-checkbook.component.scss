@@ -2,6 +2,7 @@
 
 #container {
   background-color: $background;
+  min-height: 100vh;
   .inputBox {
     width: 80%;
     height: 20px;

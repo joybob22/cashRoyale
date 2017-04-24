@@ -1,5 +1,9 @@
+@import "../../styles.scss";
+
 
 #dashboardPageDefault {
+  min-height: 100vh;
+  background-color: $background;
 display: flex;
   width: 100%;
   text-align: center;
@@ -8,7 +12,6 @@ display: flex;
     margin-top: 60px;
     display: inline-block;
   }
-
   .br-fix {
 
   }

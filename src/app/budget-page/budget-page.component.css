@@ -13,7 +13,7 @@ html, body {
   height: 100%; }
 
 #budgetContent {
-  height: 100%;
+  min-height: 100vh;
   background-color: #EDF7F2; }
   #budgetContent h1 {
     font-size: 48px;

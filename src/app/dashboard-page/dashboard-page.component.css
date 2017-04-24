@@ -63,8 +63,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
       margin-top: -5px; }
 #dashboardPage #mainContent {
   margin: 0 0 0 120px;
-  width: calc(100% - 120px);
-  display: inline-block; }
+  width: calc(100% - 120px); }
 @media screen and (max-width: 850px) {
   #dashboardPage #sideNav {
     display: none; }
