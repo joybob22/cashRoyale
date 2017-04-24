@@ -26,7 +26,13 @@ get userExists(){
     localStorage.setItem('user',JSON.stringify(credentials));
     localStorage.setItem('userData',JSON.stringify({
       budget: [],
-      checkbook:[]
+      checkbook:[
+        {
+          name: 'Zions Bank',
+          items: []
+        }
+
+      ]
 
     }));
 

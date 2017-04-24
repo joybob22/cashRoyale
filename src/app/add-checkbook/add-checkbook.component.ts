@@ -20,56 +20,54 @@ export class AddCheckbookComponent implements OnInit {
   itemErrorMessage;
   checkbookError = false;
   itemError = false;
-  checkbooks;
 
   constructor(databaseService: DatabaseService, private _route: ActivatedRoute) {
-    this.checkbooks = databaseService.users[1].checkbooks;
     this.checkbookIndex = _route.snapshot.params['index'];
   }
 
-  // checkbooks = [
-  //   {
-  //     name: 'Vacation',
-  //     items: [
-  //
-  //       {
-  //         date: '01/01/2011',
-  //         money: '300',
-  //         add: '-',
-  //         description: 'Found Money',
-  //         newAmount: 1700
-  //       },
-  //       {
-  //         date: '01/01/2011',
-  //         money: '450',
-  //         add: '+',
-  //         description: 'Bought Dog',
-  //         newAmount: 1400
-  //       },
-  //       {
-  //         date: '01/01/2011',
-  //         money: '900',
-  //         add: '-',
-  //         description: 'Got Paid',
-  //         newAmount: 1850
-  //       },
-  //       {
-  //         date: '01/01/2011',
-  //         money: '50',
-  //         add: '-',
-  //         description: 'Video Game',
-  //         newAmount: 950
-  //       },
-  //       {
-  //         date: '01/01/2011',
-  //         money: '450',
-  //         add: '+',
-  //         description: 'Fixed Car',
-  //         newAmount: 1000
-  //       }
-  //     ]
-  //   }
-  // ];
+  checkbooks = [
+    {
+      name: 'Vacation',
+      items: [
+
+        {
+          date: '01/01/2011',
+          money: '300',
+          add: '-',
+          description: 'Found Money',
+          newAmount: 1700
+        },
+        {
+          date: '01/01/2011',
+          money: '450',
+          add: '+',
+          description: 'Bought Dog',
+          newAmount: 1400
+        },
+        {
+          date: '01/01/2011',
+          money: '900',
+          add: '-',
+          description: 'Got Paid',
+          newAmount: 1850
+        },
+        {
+          date: '01/01/2011',
+          money: '50',
+          add: '-',
+          description: 'Video Game',
+          newAmount: 950
+        },
+        {
+          date: '01/01/2011',
+          money: '450',
+          add: '+',
+          description: 'Fixed Car',
+          newAmount: 1000
+        }
+      ]
+    }
+  ];
 
   ngOnInit() {
   }

@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import {DatabaseService} from "../angular-fire/database.service";
+import {AuthService} from "../angular-fire/auth-service.service";
 
 @Component({
   selector: 'app-checkbook-page',
@@ -8,79 +9,78 @@ import {DatabaseService} from "../angular-fire/database.service";
 })
 export class CheckbookPageComponent implements OnInit {
 
-  checkbooks;
-  // [
-  //   {
-  //     name: 'Bank of America',
-  //     items: [
-  //       {
-  //         date: '01/01/2011',
-  //         money: '300',
-  //         add: '+',
-  //         description: 'Found Money',
-  //         newAmount: 1700
-  //       },
-  //       {
-  //         date: '01/01/2011',
-  //         money: '450',
-  //         add: '-',
-  //         description: 'Bought Dog',
-  //         newAmount: 1400
-  //       },
-  //       {
-  //         date: '01/01/2011',
-  //         money: '900',
-  //         add: '+',
-  //         description: 'Got Paid',
-  //         newAmount: 1850
-  //       },
-  //       {
-  //         date: '01/01/2011',
-  //         money: '50',
-  //         add: '-',
-  //         description: 'Video Game',
-  //         newAmount: 950
-  //       },
-  //       {
-  //         date: '01/01/2011',
-  //         money: '450',
-  //         add: '-',
-  //         description: 'Fixed Car',
-  //         newAmount: 1000
-  //       }
-  //     ]
-  //   },
-  //   {
-  //     name: 'Spending',
-  //     items: [
-  //       {
-  //         date: '01/01/2011',
-  //         money: '900',
-  //         add: '+',
-  //         description: 'Got Paid',
-  //         newAmount: 1850
-  //       },
-  //       {
-  //         date: '01/01/2011',
-  //         money: '50',
-  //         add: '-',
-  //         description: 'Video Game',
-  //         newAmount: 950
-  //       },
-  //       {
-  //         date: '01/01/2011',
-  //         money: '450',
-  //         add: '-',
-  //         description: 'Fixed Car',
-  //         newAmount: 1000
-  //       }
-  //     ]
-  //   }
-  // ];
+  checkbooks = [
+    {
+      name: 'Bank of America',
+      items: [
+        {
+          date: '01/01/2011',
+          money: '300',
+          add: '+',
+          description: 'Found Money',
+          newAmount: 1700
+        },
+        {
+          date: '01/01/2011',
+          money: '450',
+          add: '-',
+          description: 'Bought Dog',
+          newAmount: 1400
+        },
+        {
+          date: '01/01/2011',
+          money: '900',
+          add: '+',
+          description: 'Got Paid',
+          newAmount: 1850
+        },
+        {
+          date: '01/01/2011',
+          money: '50',
+          add: '-',
+          description: 'Video Game',
+          newAmount: 950
+        },
+        {
+          date: '01/01/2011',
+          money: '450',
+          add: '-',
+          description: 'Fixed Car',
+          newAmount: 1000
+        }
+      ]
+    },
+    {
+      name: 'Spending',
+      items: [
+        {
+          date: '01/01/2011',
+          money: '900',
+          add: '+',
+          description: 'Got Paid',
+          newAmount: 1850
+        },
+        {
+          date: '01/01/2011',
+          money: '50',
+          add: '-',
+          description: 'Video Game',
+          newAmount: 950
+        },
+        {
+          date: '01/01/2011',
+          money: '450',
+          add: '-',
+          description: 'Fixed Car',
+          newAmount: 1000
+        }
+      ]
+    }
+  ];
   checkbookIndex = 0;
   checkbookTitle;
-  constructor(databaseService: DatabaseService) {
-    this.checkbooks = databaseService.users[1].checkbooks;
+  constructor(authService: AuthService) {
+    console.log(authService.userData);
     this.checkbookTitle = this.checkbooks[this.checkbookIndex].name;
   }
 
