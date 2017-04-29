@@ -2,7 +2,7 @@
   <div id="topNav">
     <i class="fa fa-bars" aria-hidden="true" id="trigger-navbar" (click)="toggleNav()"></i>
 
-    <h4><strong>{{user.time}}{{userData.name}}</strong></h4>
+    <h4><strong>{{user.time}}, {{user.name}}</strong></h4>
   </div>
 
   <div id="sideNav" [ngClass]="{'sidenav-open': open}">

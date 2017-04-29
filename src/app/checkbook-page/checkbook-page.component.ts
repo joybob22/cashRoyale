@@ -80,7 +80,7 @@ export class CheckbookPageComponent implements OnInit {
   checkbookIndex = 0;
   checkbookTitle;
   constructor(authService: AuthService) {
-    console.log(authService.userData);
+
     this.checkbookTitle = this.checkbooks[this.checkbookIndex].name;
   }
 
