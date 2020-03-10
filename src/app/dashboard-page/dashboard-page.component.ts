@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from "../angular-fire/auth-service.service";
 import {Router} from "@angular/router";
+import {User} from "../user.model";
 
 @Component({
   selector: 'app-dashboard-page',
@@ -9,7 +10,7 @@ import {Router} from "@angular/router";
 })
 export class DashboardPageComponent implements OnInit {
 
-  user: object;
+  user: User;
   open: boolean;
   userData: any;
 
