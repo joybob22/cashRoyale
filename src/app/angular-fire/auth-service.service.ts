@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+import { User } from 'app/user.model';
 
 
 @Injectable()
 export class AuthService{
 
 public userData: object;
-public user: object;
+public user: User;
   constructor() {
       this.userData = JSON.parse(localStorage.getItem('userData'));
       this.user = JSON.parse(localStorage.getItem('user'));

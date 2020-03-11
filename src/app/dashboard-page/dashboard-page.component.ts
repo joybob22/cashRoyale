@@ -22,12 +22,13 @@ export class DashboardPageComponent implements OnInit {
   ngOnInit() {
 
     if(!this._data.userExists){
+      console.log("oooof");
       this.router.navigate(['../homePage']);
     }
 
     this.user = {
       time: 'Good Morning',
-      name: ''
+      name: this._data.user.name
     };
     this.open = false;
 
