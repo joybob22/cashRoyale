@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
 import { ChartModule } from 'angular2-highcharts';
 
@@ -52,8 +51,7 @@ export function highChartsFactory() {
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-    RouterModule.forRoot([
+        RouterModule.forRoot([
       { path: 'homePage', component: HomePageComponent},
       { path: 'loginPage', component: LoginPageComponent},
       { path: 'registerPage', component: RegisterPageComponent},
