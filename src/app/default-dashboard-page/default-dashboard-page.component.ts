@@ -11,8 +11,6 @@ export class DefaultDashboardPageComponent implements OnInit {
   checkingOptions: Object;
   budgetOptions: Object;
 
-  highcharts = require('highcharts');
-
   constructor() {
     this.checkingOptions = {
 
@@ -78,7 +76,7 @@ export class DefaultDashboardPageComponent implements OnInit {
             enabled: true,
             format: '<b>{point.name}</b>: {point.percentage:.1f} %',
             style: {
-              color: (this.highcharts.theme && this.highcharts.theme.contrastTextColor) || 'black'
+              //color: (this.highcharts.theme && this.highcharts.theme.contrastTextColor) || 'black'
             }
           }
         }
@@ -317,7 +315,7 @@ export class DefaultDashboardPageComponent implements OnInit {
     };
     // Apply the theme
 
-    this.highcharts.setOptions(theme);
+    //this.highcharts.setOptions(theme);
   }
 
 }
