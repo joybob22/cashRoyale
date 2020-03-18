@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
-// import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs';
+import { AngularFireDatabase } from '@angular/fire/database';
+import 'firebase/database';
 
 @Injectable()
 export class DatabaseService {
-    constructor() {
+    usersObservable: Observable<any[]>;
+    constructor(db: AngularFireDatabase) {
+        this.usersObservable = db.list('users').valueChanges();
     }
     
 }
