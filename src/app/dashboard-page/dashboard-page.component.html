@@ -2,7 +2,10 @@
   <div id="topNav">
     <i class="fa fa-bars" aria-hidden="true" id="trigger-navbar" (click)="toggleNav()"></i>
 
-    <h4><strong>{{user.time}}, {{user.name | titlecase}}</strong></h4>
+    <h4><strong (click)="toggleDropDown()" >{{user.time}}, {{user.name | titlecase}}</strong></h4>
+    <div *ngIf="dropDown" id="dashboardDropDown" [@inOutAnimation]>
+      <p (click)="signOut()">Sign out</p>
+    </div>
   </div>
 
   <div id="sideNav" [ngClass]="{'sidenav-open': open}">

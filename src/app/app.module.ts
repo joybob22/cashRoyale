@@ -17,6 +17,7 @@ import {DatabaseService} from "./angular-fire/database.service";
 import { AngularFireModule } from '@angular/fire';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import { environment } from '../environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export const firebaseConfig = {
   
@@ -54,7 +55,8 @@ export const firebaseConfig = {
       // { path: '**', component: PageNotFoundComponent}
     ], {useHash: true}),
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    BrowserAnimationsModule
   ],
   providers: [
     DatabaseService,
