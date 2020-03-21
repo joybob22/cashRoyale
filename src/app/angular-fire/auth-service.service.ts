@@ -16,10 +16,15 @@ saveUserData () {
   localStorage.setItem('userData', JSON.stringify(this.userData));
 }
 get userExists(){
-    if(this.userData) {
+    // if(this.userData) {
+    //   return true;
+    // }
+    // return false;
+    if(JSON.parse(localStorage.getItem('userData'))) {
       return true;
+    } else {
+      return false;
     }
-    return false;
 }
 
   registerUser(credentials: any) {
@@ -35,7 +40,7 @@ get userExists(){
       ]
 
     }));
-
+    this.user = credentials;
   }
   loginWithEmail(credentials) {
       if(!credentials.name){
