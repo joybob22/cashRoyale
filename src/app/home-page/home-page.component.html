@@ -8,8 +8,8 @@
     <div class="ccparallaxeff">
       <div class="header">
         <img src="../../assets/cashRoyaleLogo.png" class="logo">
-        <a [routerLink]="['../loginPage']" class="myButton" id="loginButton">Login</a>
-        <a href="#signup" class="myButton" id="signupButton" target="_self">Sign Up</a>
+        <a [routerLink]="['../loginPage']" class="myButtonTop" id="loginButton">Login</a>
+        <a href="#signup" class="myButtonTop" id="signupButton" target="_self">Sign Up</a>
 
       </div>
       <div class="crt-parallaxvideo">
@@ -43,19 +43,19 @@
       </div>
       <div class="plax ccparallax ccparallax-three" id="signup">
         <div class="container signUp">
-          <div class="signupCaption">
-            <h1 id="signupCaption">Sign Up Today</h1>
-          </div>
           <div class="signupForm">
+            <div class="signupCaption">
+              <h1 id="signupCaption">Sign Up Today</h1>
+            </div>
             <form #registerForm="ngForm">
               <div class="form-group">
-                Name <input id="name" name="name" required type="text" [(ngModel)]="user.name">
+                <label>Name:</label> <input id="name" name="name" required type="text" [(ngModel)]="user.name">
               </div>
               <div class="form-group">
-                Email <input id="email" name="email" required type="email" [(ngModel)]="user.email">
+                <label>Email:</label> <input id="email" name="email" required type="email" [(ngModel)]="user.email">
               </div>
               <div class="form-group">
-                Password <input type="password" minlength="8" required name="password" [(ngModel)]="user.password">
+                <label>Password:</label> <input type="password" minlength="8" required name="password" [(ngModel)]="user.password">
               </div>
               <button type="button" (click)="registerUser()" [disabled]="!registerForm.form.valid" class="myButton" id="linkSignIn">Sign Up</button>
             </form>

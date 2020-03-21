@@ -79,12 +79,16 @@ h3{
 .signUp{
   display: flex;
   width: 80%;
+  align-items: center;
+  justify-content: space-around;
   .signupCaption{
     #signupCaption{
       font-family: 'Roboto', sans-serif !important;
       font-weight: 200;
+      font-size: 60px;
+      text-align: center;
+      margin-bottom: 30px;
     }
-    margin: auto;
     color: white;
     font-size: $subFontSize;
     text-transform: uppercase;
@@ -93,18 +97,38 @@ h3{
     background:rgba(0,0,0,0.5);
     opacity: 1;
     color: white;
-    margin: 0 auto;
     padding: 10px;
     border-radius: 8px;
-    div{
-      margin: 8px auto;
-      #email{
-        margin-left: 32px;
+    font-size: 20px;
+    width: 500px;
+    padding: 60px 40px;
+    .form-group {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 0 20px 0;
+      input {
+        width: 70%;
+        color: white;
+        font-size: 20px;
+        border-top: none;
+        border-right: none;
+        border-bottom: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding-left: 10px;
       }
-      #name{
-        margin-left: 27px;
+
+      input:focus {
+        outline: none;
       }
     }
+    // div{
+    //   #email{
+    //     margin-left: 32px;
+    //   }
+    //   #name{
+    //     margin-left: 27px;
+    //   }
+    // }
     .ng-valid[required], .ng-valid.required  {
       border-left: 5px solid #42A948; /* green */
     }
@@ -119,13 +143,14 @@ h3{
     width: 80px;
   }
 }
-.myButton {
+
+.myButtonTop {
   float: right;
-  margin: 10px 15px auto auto;
+  margin: 15px 15px 0 0;
   background-color:transparent;
-  -moz-border-radius:15px;
-  -webkit-border-radius:15px;
-  border-radius:15px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
   border:1px solid white;
   display:inline-block;
   cursor:pointer;
@@ -134,9 +159,28 @@ h3{
   font-size:18px;
   padding:7px 25px;
   text-decoration:none;
+  transition: all 0.2s;
+}
+
+.myButton {
+  margin-top: 20px;
+  width: 100%;
+  background-color:transparent;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  border:1px solid white;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family: $subFontSize;
+  font-size:18px;
+  padding:7px 25px;
+  text-decoration:none;
+  transition: all 0.2s;
 }
 .myButton:hover {
-  background-color: transparent;
+  background-color: rgba(0,0,0,0.3);
 }
 .myButton:active {
   position:relative;
