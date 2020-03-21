@@ -3,6 +3,7 @@
 #checkBookMainContainer {
   background-color: $background;
   min-height: 100vh;
+  padding-top: 30px;
 
 }
 
@@ -16,12 +17,20 @@
   left: 0;
 }
 
+#checkbookCard {
+  width: 95%;
+  // background-color: $cardBackground;
+  background-color: white;
+  margin: 0 auto 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
 .header {
   font-family: $largeFont;
   font-weight: 200;
   justify-content: space-between;
   display: flex;
-  height: 60px;
   align-items: center;
   border-bottom: 1px solid #DDD;
   .item {
@@ -86,7 +95,7 @@
       text-align: center;
     }
     i {
-      position: absolute;
+      // position: absolute;
       right: 5px;
       font-size: 20px;
     }
