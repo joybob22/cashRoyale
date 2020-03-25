@@ -14,14 +14,13 @@ import { DefaultDashboardPageComponent } from './default-dashboard-page/default-
 import { AuthService } from './angular-fire/auth-service.service';
 import { AddCheckbookComponent } from './add-checkbook/add-checkbook.component';
 import {DatabaseService} from "./angular-fire/database.service";
+import { AngularFireModule } from '@angular/fire';
+import {AngularFireDatabaseModule} from '@angular/fire/database';
+import { environment } from '../environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyD2ySAfpDimxQ1cIMlbmajh8nGN1vyAzV0",
-  authDomain: "cash-royale.firebaseapp.com",
-  databaseURL: "https://cash-royale.firebaseio.com",
-  projectId: "cash-royale",
-  storageBucket: "cash-royale.appspot.com",
-  messagingSenderId: "977860527900"
+  
 };
 
 @NgModule({
@@ -55,6 +54,9 @@ export const firebaseConfig = {
       { path: '', redirectTo: 'homePage', pathMatch: 'full'}
       // { path: '**', component: PageNotFoundComponent}
     ], {useHash: true}),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    BrowserAnimationsModule
   ],
   providers: [
     DatabaseService,
