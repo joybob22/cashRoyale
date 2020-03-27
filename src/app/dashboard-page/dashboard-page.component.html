@@ -12,13 +12,13 @@
     <a href="#/homePage"><img src="../../assets/cashRoyaleLogo.png" class="leftTopNavIMG"></a>
     <div id="close-button"><i class="fa fa-arrow-left fa-3x" aria-hidden="true" (click)="toggleNav()"></i></div>
 
-    <a [routerLink]="['defaultDashboardPage']">
+    <a [routerLink]="['defaultDashboardPage']" routerLinkActive="activeNav">
         <span class="nav-item first">Dashboard</span>
       </a>
-    <a [routerLink]="['checkbookPage']">
+    <a [routerLink]="['checkbookNav']" routerLinkActive="activeNav">
       <span class="nav-item">Checkbook</span>
       </a>
-    <a [routerLink]="['budgetPage']">
+    <a [routerLink]="['budgetPage']" routerLinkActive="activeNav">
       <span class="nav-item">Budget</span>
       </a>
   </div>
