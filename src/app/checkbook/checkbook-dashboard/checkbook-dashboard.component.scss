@@ -1,0 +1,64 @@
+#checkbookDashboard {
+    background-color: #f3f3f3;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    padding: 40px;
+    justify-content: center;
+}
+
+.checkbookCard, #addNew {
+    min-width: 200px;
+    background-color: white;
+    padding: 10px 50px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    margin: 20px;
+    h2 {
+        font-size: 30px;
+    }
+    i {
+        font-size: 30px;
+        background-color: white;
+        margin: 0 5px;
+    }
+    .cardMid {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .line {
+            height: 1px;
+            background-color: #aaa;
+            width: 100%;
+        }
+    }
+    .cardInfo {
+        margin: 30px 0;
+    }
+    .cardButton {
+        text-align: center;
+        border: 1px solid black;
+        padding: 5px 0;
+        border-radius: 5px;
+        margin-bottom: 40px;
+    }
+    
+}
+#addNew {
+    position: relative;
+    i {
+        font-size: 75px;
+    }
+    .cardMid {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        .line {
+            height: 1px;
+            background-color: #aaa;
+            width: 100%;
+        }
+    }
+}

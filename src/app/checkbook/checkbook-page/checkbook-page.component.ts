@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
-import {DatabaseService} from "../angular-fire/database.service";
-import {AuthService} from "../angular-fire/auth-service.service";
+import {DatabaseService} from "../../angular-fire/database.service";
+import {AuthService} from "../../angular-fire/auth-service.service";
 
 @Component({
   selector: 'app-checkbook-page',

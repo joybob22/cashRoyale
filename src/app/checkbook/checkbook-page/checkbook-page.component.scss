@@ -1,11 +1,6 @@
-@import "../../styles.scss";
+@import "../../../styles.scss";
 
-#checkBookMainContainer {
-  background-color: $background;
-  min-height: 100vh;
-  padding-top: 30px;
 
-}
 
 .overlay {
   height: 100%;
@@ -17,14 +12,7 @@
   left: 0;
 }
 
-#checkbookCard {
-  width: 95%;
-  // background-color: $cardBackground;
-  background-color: white;
-  margin: 0 auto 0 auto;
-  padding: 40px 20px;
-  box-sizing: border-box;
-}
+
 
 .header {
   font-family: $largeFont;
