@@ -18,6 +18,9 @@ export class HomePageComponent implements OnInit {
   }
 
   ngOnInit() {
+    if(this._data.userExists) {
+      this.router.navigate(['/dashboardPage']);
+    }
     this.user = {
         password: '',
         email: '',
@@ -28,7 +31,7 @@ export class HomePageComponent implements OnInit {
 
   registerUser() {
       this._data.registerUser(this.user);
-      this.router.navigate(['../dashboardPage']);
+      this.router.navigate(['/dashboardPage']);
   }
 
 

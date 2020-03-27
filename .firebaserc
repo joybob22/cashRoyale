@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "cash-royale": {
+      "hosting": {
+        "cash-royale": [
+          "cash-royale"
+        ]
+      }
+    }
+  }
+}

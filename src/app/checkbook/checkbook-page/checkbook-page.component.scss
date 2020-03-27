@@ -1,10 +1,6 @@
-@import "../../styles.scss";
+@import "../../../styles.scss";
 
-#checkBookMainContainer {
-  background-color: $background;
-  min-height: 100vh;
 
-}
 
 .overlay {
   height: 100%;
@@ -16,12 +12,13 @@
   left: 0;
 }
 
+
+
 .header {
   font-family: $largeFont;
   font-weight: 200;
   justify-content: space-between;
   display: flex;
-  height: 60px;
   align-items: center;
   border-bottom: 1px solid #DDD;
   .item {
@@ -86,7 +83,7 @@
       text-align: center;
     }
     i {
-      position: absolute;
+      // position: absolute;
       right: 5px;
       font-size: 20px;
     }
