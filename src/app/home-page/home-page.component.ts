@@ -11,10 +11,10 @@ import {AuthService} from "../angular-fire/auth-service.service";
 export class HomePageComponent implements OnInit {
 
   user: any;
+  date: Date;
 
   constructor(private router: Router, private _data: AuthService) {
-
-
+      this.date = new Date();
   }
 
   ngOnInit() {
