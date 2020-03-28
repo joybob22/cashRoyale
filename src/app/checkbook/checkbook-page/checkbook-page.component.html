@@ -1,5 +1,5 @@
-<div id="checkBookMainContainer">
-  <div class="overlay" [ngClass]="{menuShow: menuState}" (click)="toggleMenu()"></div>
+<div id="checkbookMainContainer">
+  <!-- <div class="overlay" [ngClass]="{menuShow: menuState}" (click)="toggleMenu()"></div>
   <div id="checkbookCard">
     <div class="header">
       <div class="checkbook" (click)="toggleMenu()">
@@ -10,38 +10,44 @@
         <h3 class="item">Add Checkbook/Item</h3>
         <i class="fa fa-plus-square-o" aria-hidden="true"></i>
       </div>
-    </div>
+    </div> -->
     <div id="checkbookHeader">
       <div id="checkbookHeaderWords">
-        <h1>{{checkbookTitle}}</h1>
+        <h1>{{checkbook.name}}</h1>
+      </div>
+      <div id="checkbookHeaderContent">
+        <div id="headBalance">
+          <p>Balance: ${{checkbook.currentBalance}}</p>
+        </div>
+        <div id="editButton">Edit Checkbook</div>
+        <div id="createButton">Add Transaction</div>
       </div>
     </div>
   
     <div id="checkbookSubHeaders">
-      <h3 class="subHeader">Date</h3>
-      <h3 class="subHeader">Deposit/Withdraw</h3>
-      <h3 class="subHeader">Description</h3>
-      <h3 class="subHeader">New Balance</h3>
+      <h3 class="subHeader grow1">Date</h3>
+      <h3 class="subHeader grow1">Deposit/Withdraw</h3>
+      <h3 class="subHeader grow2">Description</h3>
+      <h3 class="subHeader grow1">New Balance</h3>
     </div>
   
-    <div id="checkbookContent">
-      <div class="checkbookContent" *ngFor="let checkbook of checkbooks[checkbookIndex].items; let i = index">
-        <p class="checkbookItem">{{checkbook.date}}</p>
-        <p class="checkbookItem">{{checkbook.add}} {{checkbook.money}}</p>
-        <p class="checkbookItem">{{checkbook.description}}</p>
-        <p class="checkbookItem">${{checkbook.newAmount}}<i class="fa fa-times" aria-hidden="true" (click)="deleteItem(i)"></i></p>
+    <div id="checkbookContent" *ngIf="checkbook">
+      <div class="checkbookContent" 
+        *ngFor="let item of checkbook.items; let i = index" 
+        [ngClass]="{'increase': item.money > 0, 'decrease': item.money < 0}"
+        >
+        <div class="checkbookItem grow1">
+          <p>{{item.date}}</p>
+        </div>
+        <div class="checkbookItem grow1">
+          <p>{{item.money}}</p>
+        </div>
+        <div class="checkbookItem grow2">
+          <p>{{item.description}}</p>
+        </div>
+        <div class="checkbookItem grow1">
+          <p>${{item.newAmount}}</p>
+        </div>
       </div>
     </div>
-  
-    <div class="slidingMenu" [ngClass]="{menuShow: menuState}">
-      <i class="fa fa-times x" aria-hidden="true" (click)="toggleMenu()"></i>
-      <div id="menuHeader">
-        <h1>Checkbooks</h1>
-      </div>
-      <div class="checkbooks" *ngFor="let checkbook of checkbooks; let i = index;" (click)="switchCheckbook(i)">
-        <span>{{checkbook.name}}</span>
-        <i class="fa fa-times x" aria-hidden="true" (click)="deleteCheckbook(i)"></i>
-      </div>
-    </div>
-  </div>
 </div>

@@ -2,14 +2,19 @@
 
 
 
-.overlay {
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0,0,0,0.5);
-  display: none;
-  position: fixed;
-  top:0;
-  left: 0;
+// .overlay {
+//   height: 100%;
+//   width: 100%;
+//   background-color: rgba(0,0,0,0.5);
+//   display: none;
+//   position: fixed;
+//   top:0;
+//   left: 0;
+// }
+
+#checkbookMainContainer {
+  padding: 40px 20px;
+  background-color: #f3f3f3;
 }
 
 
@@ -55,20 +60,41 @@
 
 #checkbookHeader {
   width: 400px;
-  margin: 50px auto;
+  margin: 0px auto 50px auto;
   border-bottom: 1px solid #ddd;
+  background-color: white;
+  padding: 20px;
   #checkbookHeaderWords {
     text-align: center;
+  }
+
+  #headBalance {
+    color: #777;
+    text-align: center;
+    font-size: 15px;
+  }
+  #editButton, #createButton {
+    padding: 5px;
+    color: #777;
+    font-size: 15px;
+    margin-top: 15px;
+    text-align: center;
+    border: 1px solid #777;
   }
 }
 
 #checkbookSubHeaders {
   display: flex;
-  justify-content: space-around;
+
+  border-bottom: 1px solid #ddd;
+  padding: 0 15px;
   .subHeader {
-    text-align: center;
-    width: 300px;
-    border-bottom: 1px solid #ddd;
+    flex-basis: 100%;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 100;
+    color: #777;
+    padding-bottom: 5px;
   }
 }
 
@@ -76,11 +102,15 @@
   margin-top: 5px;
   .checkbookContent {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-top: 5px;
+    padding: 15px;
+    margin: 10px 0;
     .checkbookItem {
-      width: 300px;
-      text-align: center;
+      text-align: left;
+      font-size: 15px;
+      flex-basis: 100%;
+      display: flex;
     }
     i {
       // position: absolute;
@@ -91,6 +121,26 @@
       cursor: pointer;
     }
   }
+}
+
+.grow1 {
+  flex-grow: 1;
+}
+
+.grow2 {
+  flex-grow: 2;
+}
+
+.grow3 {
+  flex-grow: 3;
+}
+
+.increase {
+  background-color: #eafeea;
+}
+
+.decrease {
+  background-color: #ffe5e5;
 }
 
 .slidingMenu {

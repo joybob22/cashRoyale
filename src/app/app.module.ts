@@ -55,7 +55,7 @@ export const firebaseConfig = {
             children: [
               { path: 'checkbookAbout', component: CheckbookAboutComponent},
               { path: 'checkbookDashboard', component: CheckbookDashboardComponent},
-              { path: 'checkbookPage', component: CheckbookPageComponent},
+              { path: 'checkbookDetail/:id', component: CheckbookPageComponent},
               { path: '', redirectTo: 'checkbookAbout', pathMatch: 'full'}
 
             ]},

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CheckbookService } from '../checkbook.service';
 
 @Component({
   selector: 'app-checkbook-dashboard',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckbookDashboardComponent implements OnInit {
 
-  constructor() { }
+  checkbooks;
+
+  constructor(private checkbookService: CheckbookService) {
+    this.checkbooks = this.checkbookService.getCheckbooks();
+  }
 
   ngOnInit(): void {
   }
