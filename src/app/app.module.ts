@@ -14,8 +14,8 @@ import { DefaultDashboardPageComponent } from './default-dashboard-page/default-
 import { AuthService } from './angular-fire/auth-service.service';
 import { AddCheckbookComponent } from './checkbook/add-checkbook/add-checkbook.component';
 import {DatabaseService} from "./angular-fire/database.service";
-import { AngularFireModule } from '@angular/fire';
-import {AngularFireDatabaseModule} from '@angular/fire/database';
+// import { AngularFireModule } from '@angular/fire';
+// import {AngularFireDatabaseModule} from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CheckbookNavComponent } from './checkbook/checkbook-nav/checkbook-nav.component';
@@ -67,8 +67,8 @@ export const firebaseConfig = {
       { path: '', redirectTo: 'homePage', pathMatch: 'full'}
       // { path: '**', component: PageNotFoundComponent}
     ], {useHash: true}),
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,
+    // AngularFireModule.initializeApp(environment.firebase),
+    // AngularFireDatabaseModule,
     BrowserAnimationsModule
   ],
   providers: [

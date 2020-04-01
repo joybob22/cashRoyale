@@ -6,11 +6,6 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyD2ySAfpDimxQ1cIMlbmajh8nGN1vyAzV0',
-  authDomain: 'cash-royale.firebaseapp.com',
-  databaseURL: 'https://cash-royale.firebaseio.com',
-  projectId: 'cash-royale',
-  storageBucket: 'cash-royale.appspot.com',
-  messagingSenderId: '977860527900'
+    //FirebaseObjectKey should go here
   }
 };
