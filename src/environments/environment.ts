@@ -7,5 +7,6 @@ export const environment = {
   production: false,
   firebase: {
     //FirebaseObjectKey should go here
+    //this change should NOT be on github
   }
 };
