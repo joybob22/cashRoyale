@@ -32,17 +32,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
     }
     background-color: $darkBlue;
 
-    #dashboardDropDown {
-      position: absolute;
-      width: 200px;
-      right: 10px;
-      top: 50px;
-      background-color: #296c83;
-      padding: 20px;
-      p:hover {
-        cursor: pointer;
-      }
-    }
+    
 
   }
   #sideNav {
@@ -66,22 +56,82 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, ul, ol, li {
       text-decoration: none;
       color: white;
       :hover {
-        background-color: #4BB5C1;
+        text-decoration: underline;
       }
 
       .nav-item {
-        padding: 25px 0;
+        padding: 15px 0;
         display: block;
       }
       .nav-item.first {
         margin-top: -5px;
       }
 
+      
+
     }
     .activeNav{
       text-decoration: underline;
     }
 
+    .userCirc {
+      font-size: 35px;
+      padding: 20px 0 10px 0;
+      color: white;
+    }
+
+    .userCirc:hover {
+      cursor: pointer;
+    }
+
+    .userContainer {
+      position: relative;
+    }
+
+    #dashboardDropDown {
+      position: absolute;
+      width: 200px;
+      overflow: hidden;
+      left: 130px;
+      top: 0;
+      background-color: #296c83;
+      color: white;
+      padding: 20px;
+      border-radius: 5px;
+      text-align: left;
+      p:hover {
+        cursor: pointer;
+      }
+
+      h4 {
+        text-decoration: underline;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 13px;
+        padding: 3px 0;
+      }
+
+      p:hover {
+        text-decoration: underline;
+      }
+    }
+
+    
+    #checkbookChildRoutes {
+      font-size: 13px;
+      margin-top: -13px;
+      overflow: hidden;
+      
+
+      .nav-item {
+        padding: 5px 0;
+        text-align: left;
+        margin-left: 28px;
+      }
+    }
 
   }
 

@@ -2,9 +2,10 @@
     background-color: #f3f3f3;
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch;
+    align-items: center;
     padding: 40px;
     justify-content: center;
+    min-height: 90vh;
 }
 
 .checkbookCard, #addNew {

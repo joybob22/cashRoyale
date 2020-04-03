@@ -20,17 +20,38 @@ import { trigger,
         transition(
           ':enter', 
           [
-            style({ opacity: 0 }),
+            style({ left: '330px' }),
             animate('0.3s ease-out', 
-                    style({ opacity: 1 }))
+                    style({ left: '130px' }))
           ]
         ),
         transition(
           ':leave', 
           [
-            style({ opacity: 1 }),
+            style({ left: '130px' }),
             animate('0.3s ease-in', 
-                    style({ opacity: 0 }))
+                    style({ left: '330px' }))
+          ]
+        )
+      ]
+    ),
+    trigger(
+      'slideDown', 
+      [
+        transition(
+          ':enter', 
+          [
+            style({ height: 0 }),
+            animate('0.3s ease-out', 
+                    style({ height: '50px' }))
+          ]
+        ),
+        transition(
+          ':leave', 
+          [
+            style({ height: '50px' }),
+            animate('0.3s ease-in', 
+                    style({ height: 0 }))
           ]
         )
       ]

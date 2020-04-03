@@ -1,23 +1,33 @@
 <div id="dashboardPage">
-  <div id="topNav">
-    <i class="fa fa-bars" aria-hidden="true" id="trigger-navbar" (click)="toggleNav()"></i>
-
-    <h4 *ngIf="user"><strong (click)="toggleDropDown()" >{{user.time}}, {{user.name | titlecase}}</strong></h4>
-    <div *ngIf="dropDown" id="dashboardDropDown" [@inOutAnimation]>
-      <p (click)="signOut()">Sign out</p>
-    </div>
-  </div>
 
   <div id="sideNav" [ngClass]="{'sidenav-open': open}">
     <a href="#/homePage"><img src="../../assets/cashRoyaleLogo.png" class="leftTopNavIMG"></a>
     <div id="close-button"><i class="fa fa-arrow-left fa-3x" aria-hidden="true" (click)="toggleNav()"></i></div>
 
+    <div class="userContainer">
+      <i (click)="toggleDropDown()" class="nav-item first userCirc fas fa-user-circle"></i>
+      <div *ngIf="dropDown" id="dashboardDropDown" [@inOutAnimation]>
+        <h4 *ngIf="user"><strong (click)="toggleDropDown()" >{{user.name | titlecase}}</strong></h4>
+        <p>Profile</p>
+        <p (click)="signOut()">Sign out</p>
+        
+    </div>
+      </div>
+
     <a [routerLink]="['defaultDashboardPage']" routerLinkActive="activeNav">
-        <span class="nav-item first">Dashboard</span>
+        <span class="nav-item">Dashboard</span>
       </a>
-    <a [routerLink]="['checkbookNav']" routerLinkActive="activeNav">
+    <a [routerLink]="['checkbookNav']" routerLinkActive="activeNav" #checkbook="routerLinkActive">
       <span class="nav-item">Checkbook</span>
       </a>
+    <div *ngIf="checkbook.isActive" id="checkbookChildRoutes" [@slideDown]>
+      <a [routerLink]="['checkbookNav/checkbookAbout']" routerLinkActive="activeNav">
+        <span class="nav-item">About</span>
+        </a>
+        <a [routerLink]="['checkbookNav/checkbookDashboard']" routerLinkActive="activeNav">
+          <span class="nav-item">Dashboard</span>
+          </a>
+    </div>
     <a [routerLink]="['budgetPage']" routerLinkActive="activeNav">
       <span class="nav-item">Budget</span>
       </a>
