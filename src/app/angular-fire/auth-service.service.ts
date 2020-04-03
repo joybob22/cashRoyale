@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import {User} from '../user.model';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { auth } from 'firebase/app';
 
 @Injectable()
 export class AuthService {
 
 public userData: object;
 public user: User;
-  constructor() {
+  constructor(public authModule: AngularFireAuth) {
       this.userData = JSON.parse(localStorage.getItem('userData'));
       this.user = JSON.parse(localStorage.getItem('user'));
   }
@@ -51,11 +53,24 @@ get userExists(){
   }
 
   signOut() {
-
     localStorage.setItem('user', null);
     localStorage.setItem('userData', null);
   }
 
+  dbLogout() {
+    this.authModule.signOut().then(data => {
+      console.log("success Logout");
+    });
+  }
 
+  dbLogin(email: string, pswd: string) {
+    this.authModule.signInWithEmailAndPassword(email, pswd).then(bruh => {console.log(bruh.user)}).catch(err => {
+      console.error(`ERROR: ${err}`);
+    });
+  }
+
+  dbGetUser() {
+    return this.authModule.currentUser;
+  }
 
 }

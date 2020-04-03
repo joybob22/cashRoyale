@@ -34,5 +34,16 @@ export class HomePageComponent implements OnInit {
       this.router.navigate(['/dashboardPage']);
   }
 
+  logUser() {
+    var e = this._data.dbGetUser().then(user => {console.log(user)});
+  }
+
+  // Auth Test Function
+  loginAdmin() {
+    this._data.dbLogin("admin@cashroyale.org", "Yes-pls123");
+  }
+  logout() {
+    this._data.dbLogout();
+  }
 
 }
