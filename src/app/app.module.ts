@@ -21,6 +21,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CheckbookNavComponent } from './checkbook/checkbook-nav/checkbook-nav.component';
 import { CheckbookAboutComponent } from './checkbook/checkbook-about/checkbook-about.component';
 import { CheckbookDashboardComponent } from './checkbook/checkbook-dashboard/checkbook-dashboard.component';
+import { MatInputModule } from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
 
 export const firebaseConfig = {
   
@@ -69,7 +73,11 @@ export const firebaseConfig = {
     ], {useHash: true}),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    ReactiveFormsModule
   ],
   providers: [
     DatabaseService,

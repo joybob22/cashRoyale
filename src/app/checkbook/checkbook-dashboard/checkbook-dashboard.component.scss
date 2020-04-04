@@ -1,21 +1,32 @@
 #checkbookDashboard {
     background-color: #f3f3f3;
+    
+    padding: 40px;
+    
+    min-height: 90vh;
+
+    h1 {
+        margin: 0 0 50px 0;
+    }
+}
+
+#cardsContainer {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 40px;
     justify-content: center;
-    min-height: 90vh;
+    height: 100%;
 }
 
 .checkbookCard, #addNew {
     min-width: 200px;
     background-color: white;
-    padding: 10px 50px;
+    padding: 40px 50px;
     border-radius: 5px;
     text-align: center;
     position: relative;
     margin: 20px;
+    box-shadow: 1px 1px 2px #aaa;
     h2 {
         font-size: 30px;
     }
@@ -42,7 +53,7 @@
         border: 1px solid black;
         padding: 5px 0;
         border-radius: 5px;
-        margin-bottom: 40px;
+        margin-bottom: 0px;
         transition: all 0.25s;
     }
     .cardButton:hover {
@@ -54,17 +65,28 @@
 #addNew {
     position: relative;
     i {
-        font-size: 75px;
+        font-size: 35px;
     }
     .cardMid {
         display: flex;
         height: 100%;
         align-items: center;
         justify-content: center;
+        transition: all 0.5s;
+        :hover {
+            cursor: pointer;
+        }
         .line {
             height: 1px;
             background-color: #aaa;
             width: 100%;
         }
+    }
+    .createNewCheckbook {
+        overflow: hidden;
+    }
+
+    mat-form-field {
+        width: 100%;
     }
 }

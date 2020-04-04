@@ -1,24 +1,73 @@
 <div id="checkbookDashboard">
-    <div class="checkbookCard" *ngFor="let checkbook of checkbooks">
-        <h2>{{ checkbook.name }}</h2>
-        <div class="cardMid">
-            <div class="line"></div>
-            <i class="fas" [ngClass]="checkbook.icon"></i>
-            <div class="line"></div>
+    <h1>Checkbook Dashboard</h1>
+    <div id="cardsContainer">
+        <div class="checkbookCard" *ngFor="let checkbook of checkbooks">
+            <h2>{{ checkbook.name }}</h2>
+            <div class="cardMid">
+                <div class="line"></div>
+                <i class="fas" [ngClass]="checkbook.icon"></i>
+                <div class="line"></div>
+            </div>
+            <div class="cardInfo">
+                <p>Balance: ${{checkbook.currentBalance}}</p>
+                <p>Last Edit: {{checkbook.lastEdit | date}}</p>
+            </div>
+            <div class="cardButton" [routerLink]="['../checkbookDetail', checkbook.id]">
+                Details
+            </div>
         </div>
-        <div class="cardInfo">
-            <p>Balance: ${{checkbook.currentBalance}}</p>
-            <p>Last Edit: {{checkbook.lastEdit | date}}</p>
-        </div>
-        <div class="cardButton" [routerLink]="['../checkbookDetail', checkbook.id]">
-            Details
-        </div>
-    </div>
-    <div id="addNew">
-        <div class="cardMid">
-            <div class="line"></div>
-            <i class="fas fa-plus-circle"></i>
-            <div class="line"></div>
+        <div id="addNew">
+            <div class="cardMid" *ngIf="toggleCreate" (click)="addNewToggle()">
+                <div class="line"></div>
+                <i class="fas fa-plus-circle"></i>
+                <div class="line"></div>
+            </div>
+            <div class="createNewCheckbook" *ngIf="!toggleCreate" [@slideDown] [formGroup]="form">
+                <h2>New Checkbook</h2>
+                <div>
+                    <mat-form-field>
+                        <input matInput formControlName="name" placeholder="Checkbook Name" required>
+                        <mat-error>Name is required</mat-error>
+                    </mat-form-field>
+                    
+                </div>
+                <div>
+                    <mat-form-field>
+                        <input formControlName="balance" matInput placeholder="Starting Balance" required>
+                        <mat-hint>Do not include the dollar sign</mat-hint>
+                        <mat-error>Balance must be a number(no symbols)</mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <mat-label>Checkbook Icon</mat-label>
+                        <mat-select required formControlName="icon">
+                            <mat-option value="fa-money-bill-wave">
+                                <i class="fas fa-money-bill-wave"></i> Money
+                            </mat-option>
+                            <mat-option value="fa-money-check">
+                                <i class="fas fa-money-check"></i> Check
+                            </mat-option>
+                            <mat-option value="fa-wallet">
+                                <i class="fas fa-wallet"></i> Wallet
+                            </mat-option>
+                            <mat-option value="fa-dollar-sign">
+                                <i class="fas fa-dollar-sign"></i> Dollar Sign
+                            </mat-option>
+                            <mat-option value="fa-credit-card">
+                                <i class="fas fa-credit-card"></i> Credit Card
+                            </mat-option>
+                            <mat-option value="fa-hand-holding-usd">
+                                <i class="fas fa-hand-holding-usd"></i> Hand
+                            </mat-option>
+                        </mat-select>
+                        <mat-error>Icon is required</mat-error>
+                    </mat-form-field>
+                    <div class="cardButton" (click)="onSubmit()">
+                        Create
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

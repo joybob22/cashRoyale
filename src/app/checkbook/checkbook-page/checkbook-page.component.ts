@@ -26,7 +26,7 @@ export class CheckbookPageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.checkbook = this.checkbookService.getCheckbook(this._route.snapshot.params['id']);
+    this.checkbook = this.checkbookService.getCheckbook(Number(this._route.snapshot.params['id']));
     console.log(this.checkbook);
 
   }
