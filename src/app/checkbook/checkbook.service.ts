@@ -9,7 +9,7 @@ export class CheckbookService {
 
   private checkbooks = [
     {
-      id: 1,
+      id: 0,
       name: 'Debit Card',
       currentBalance: 5000,
       startingBalance: 0,
@@ -49,7 +49,7 @@ export class CheckbookService {
       ]
     },
     {
-      id: 2,
+      id: 1,
       name: 'Savings',
       currentBalance: 15000,
       startingBalance: 500,
@@ -98,6 +98,11 @@ export class CheckbookService {
       items: []
     });
     return this.checkbooks;
+  }
+
+  createCheckbookTransaction(id: number, item) {
+    this.checkbooks[id].items.unshift(item);
+    return this.checkbooks[id];
   }
 
 

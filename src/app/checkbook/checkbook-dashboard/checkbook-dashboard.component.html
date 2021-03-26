@@ -12,9 +12,9 @@
                 <p>Balance: ${{checkbook.currentBalance}}</p>
                 <p>Last Edit: {{checkbook.lastEdit | date}}</p>
             </div>
-            <div class="cardButton" [routerLink]="['../checkbookDetail', checkbook.id]">
+            <button mat-stroked-button [routerLink]="['../checkbookDetail', checkbook.id]">
                 Details
-            </div>
+            </button>
         </div>
         <div id="addNew">
             <div class="cardMid" *ngIf="toggleCreate" (click)="addNewToggle()">
@@ -63,10 +63,10 @@
                         </mat-select>
                         <mat-error>Icon is required</mat-error>
                     </mat-form-field>
-                    <div class="cardButton" (click)="onSubmit()">
-                        Create
-                    </div>
                 </div>
+                <button mat-stroked-button (click)="onSubmit()">
+                    Create
+                </button>
             </div>
         </div>
     </div>
